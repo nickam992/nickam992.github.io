@@ -1,33 +1,32 @@
-/* line 6, ../../src/native_elements/mhe-anchor.scss */
-a, .mhe-anchor {
+/* line 1, ../../src/native_elements/mhe-anchor.scss */
+.mhe-theme-namespace a, .mhe-theme-namespace .mhe-anchor {
   color: green;
 }
-/* line 9, ../../src/native_elements/mhe-anchor.scss */
-a:link, .mhe-anchor:link {
+/* line 4, ../../src/native_elements/mhe-anchor.scss */
+.mhe-theme-namespace a:link, .mhe-theme-namespace .mhe-anchor:link {
   color: green;
 }
-/* line 13, ../../src/native_elements/mhe-anchor.scss */
-a:visited, .mhe-anchor:visited {
+/* line 8, ../../src/native_elements/mhe-anchor.scss */
+.mhe-theme-namespace a:visited, .mhe-theme-namespace .mhe-anchor:visited {
   color: #004d00;
 }
+/* line 13, ../../src/native_elements/mhe-anchor.scss */
+.mhe-theme-namespace a:hover, .mhe-theme-namespace .mhe-anchor:hover {
+  color: purple;
+  text-decoration: underline;
+}
 /* line 18, ../../src/native_elements/mhe-anchor.scss */
-a:hover, .mhe-anchor:hover {
+.mhe-theme-namespace a:active, .mhe-theme-namespace .mhe-anchor:active {
   color: purple;
   text-decoration: underline;
 }
 /* line 23, ../../src/native_elements/mhe-anchor.scss */
-a:active, .mhe-anchor:active {
-  color: purple;
-  text-decoration: underline;
-}
-/* line 28, ../../src/native_elements/mhe-anchor.scss */
-a:focus, .mhe-anchor:focus {
+.mhe-theme-namespace a:focus, .mhe-theme-namespace .mhe-anchor:focus {
   color: green;
   outline: 1px solid black;
 }
-
-/* line 5, ../../src/native_elements/mhe-button.scss */
-button, .mhe-button {
+/* line 1, ../../src/native_elements/mhe-button.scss */
+.mhe-theme-namespace button, .mhe-theme-namespace .mhe-button {
   background-color: green;
   font-family: "Courier New", Courier, monospace;
   color: yellow;
@@ -35,94 +34,83 @@ button, .mhe-button {
   font-size: 14px;
   padding: 10px 20px;
 }
-/* line 13, ../../src/native_elements/mhe-button.scss */
-button:hover, .mhe-button:hover {
+/* line 9, ../../src/native_elements/mhe-button.scss */
+.mhe-theme-namespace button:hover, .mhe-theme-namespace .mhe-button:hover {
   background-color: #004d00;
 }
-/* line 17, ../../src/native_elements/mhe-button.scss */
-button:active, .mhe-button:active {
+/* line 13, ../../src/native_elements/mhe-button.scss */
+.mhe-theme-namespace button:active, .mhe-theme-namespace .mhe-button:active {
   background-color: #001a00;
 }
-/* line 21, ../../src/native_elements/mhe-button.scss */
-button:focus, .mhe-button:focus {
+/* line 17, ../../src/native_elements/mhe-button.scss */
+.mhe-theme-namespace button:focus, .mhe-theme-namespace .mhe-button:focus {
   outline: 2px solid black;
 }
-/* line 25, ../../src/native_elements/mhe-button.scss */
-button:disabled, .mhe-button:disabled {
+/* line 21, ../../src/native_elements/mhe-button.scss */
+.mhe-theme-namespace button:disabled, .mhe-theme-namespace .mhe-button:disabled {
   background-color: #cccccc;
   color: #666666;
 }
-
-/* line 6, ../../src/native_elements/mhe-h1-through-h6.scss */
-h1, h2, h3, h4, h5, h6 {
+/* line 1, ../../src/native_elements/mhe-h1-through-h6.scss */
+.mhe-theme-namespace h1, .mhe-theme-namespace h2, .mhe-theme-namespace h3, .mhe-theme-namespace h4, .mhe-theme-namespace h5, .mhe-theme-namespace h6 {
   font-family: "Comic Sans MS", cursive, sans-serif;
 }
-
-/* line 10, ../../src/native_elements/mhe-h1-through-h6.scss */
-h1 {
+/* line 5, ../../src/native_elements/mhe-h1-through-h6.scss */
+.mhe-theme-namespace h1 {
   color: red;
   font-size: 1.8em;
   font-weight: lighter;
 }
-
-/* line 16, ../../src/native_elements/mhe-h1-through-h6.scss */
-h2 {
+/* line 11, ../../src/native_elements/mhe-h1-through-h6.scss */
+.mhe-theme-namespace h2 {
   color: green;
   font-size: 1.5em;
   font-weight: lighter;
 }
-
-/* line 22, ../../src/native_elements/mhe-h1-through-h6.scss */
-h3 {
+/* line 17, ../../src/native_elements/mhe-h1-through-h6.scss */
+.mhe-theme-namespace h3 {
   color: yellow;
   font-size: 1.25em;
   font-weight: lighter;
 }
-
-/* line 28, ../../src/native_elements/mhe-h1-through-h6.scss */
-h4 {
+/* line 23, ../../src/native_elements/mhe-h1-through-h6.scss */
+.mhe-theme-namespace h4 {
   color: red;
   font-size: 1.5em;
   font-weight: bold;
 }
-
-/* line 34, ../../src/native_elements/mhe-h1-through-h6.scss */
-h5 {
+/* line 29, ../../src/native_elements/mhe-h1-through-h6.scss */
+.mhe-theme-namespace h5 {
   color: green;
   font-size: 1.25em;
   font-weight: normal;
 }
-
-/* line 40, ../../src/native_elements/mhe-h1-through-h6.scss */
-h6 {
+/* line 35, ../../src/native_elements/mhe-h1-through-h6.scss */
+.mhe-theme-namespace h6 {
   color: yellow;
   font-size: 1.25em;
   font-weight: normal;
 }
-
-/* line 5, ../../src/native_elements/mhe-input.scss */
-input {
+/* line 1, ../../src/native_elements/mhe-input.scss */
+.mhe-theme-namespace input {
   border: 1px solid #cccccc;
   background-color: white;
   box-shadow: 0 0 10px #8f8f8f;
   padding: 0px 7px;
   vertical-align: middle;
 }
-
-/* line 5, ../../src/native_elements/mhe-textarea.scss */
-textarea {
+/* line 1, ../../src/native_elements/mhe-textarea.scss */
+.mhe-theme-namespace textarea {
   border: 3px solid #cccccc;
   background-color: white;
   padding: 2px;
 }
-
 /* line 5, ../../src/mhe-classes/background-and-border.scss */
-.mhe-background-color {
+.mhe-theme-namespace .mhe-background-color {
   background-color: #def0f2;
 }
-
 /* line 9, ../../src/mhe-classes/background-and-border.scss */
-.mhe-border {
+.mhe-theme-namespace .mhe-border {
   box-shadow: 10px 10px 5px #888888;
   border: 3px solid purple;
 }
