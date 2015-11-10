@@ -1,3 +1,65 @@
+/* line 22, ../../src/themes/theme2.scss */
+.mhe-theme-namespace {
+  /*  This widget can be found in Mega CLO in Model: Templates 3
+
+      This is built with a <canvas>, which uses JavaScript.  Can't change
+      it with CSS.
+  */
+  /* This widget can be found in Mega CLO towards the end of Model: Templates 2
+
+      This one will be tricky, because they've used <li> elements as buttons...
+      They're using CSS selectors like "#toggler.blue .buttons li.selected"
+  */
+  /*  This widget can be found in Mega CLO in Model: Templates 3
+
+      Can't view it in Mega CLO.  It just says:
+      "{"info": {}, "status": {"statusMsg": "Internal Server Error", "statusDetails": {}, "statusCode": 500}, "result": {}}
+  */
+  /*  This widget can be found in Mega CLO in Model: Templates 3
+
+      Kevin had some ideas on this, but I'm not sure there's any work
+      to be done here.
+  */
+  /*  This widget can be found in Mega CLO in Concept: Widgets and Templates 1
+
+      Kevin had some ideas on this, but I'm not sure there's any work
+      to be done here.
+  */
+  /*  This widget can be found in Mega CLO in Model: Templates 2
+
+      ask Jegan to change "Expand All" and "Collapse All" from div's to buttons.
+      ask Jegan to change class="disabled" to HTML attribute disabled
+  */
+  /*  Couldn't find this one in Mega CLO
+
+  */
+  /*  This widget can be found in Mega CLO in Model: Templates 2
+
+      Pop Tips Plus uses a <canvas>, which means it's all JavaScript.
+      We can't style it with CSS.
+  */
+  /*  This widget can be found in Mega CLO in Model: Templates 2
+
+      I'm not sure there's any work to do here.  It's just a button,
+      which should pick up the native <button> styles.
+
+  */
+  /*  This widget can be found in Mega CLO in Model: Templates 3
+
+      I think the only thing to style here are the icons, which we
+      are going to do later.
+
+  */
+  /*  This widget can be found in Mega CLO at end of Model: Templates 2
+
+      styling the buttons will be easy, as they use <button> tags.
+
+      styling "Step One" will be tricky, because it's using inline styles.
+
+      Styling the lightblue numbers will be tricky, because they also use
+      inline styles.
+  */
+}
 /* line 1, ../../src/native_elements/mhe-anchor.scss */
 .mhe-theme-namespace a, .mhe-theme-namespace .mhe-anchor {
   color: #f37921;
@@ -34,22 +96,22 @@
   font-size: 14px;
   padding: 10px 20px;
 }
-/* line 9, ../../src/native_elements/mhe-button.scss */
+/* line 14, ../../src/native_elements/mhe-button.scss */
 .mhe-theme-namespace button:hover, .mhe-theme-namespace .mhe-button:hover {
-  background-color: #d5600c;
+  background-color: #be621f;
 }
-/* line 13, ../../src/native_elements/mhe-button.scss */
+/* line 22, ../../src/native_elements/mhe-button.scss */
 .mhe-theme-namespace button:active, .mhe-theme-namespace .mhe-button:active {
-  background-color: #a54a09;
+  background-color: #7f4c26;
 }
-/* line 17, ../../src/native_elements/mhe-button.scss */
+/* line 30, ../../src/native_elements/mhe-button.scss */
 .mhe-theme-namespace button:focus, .mhe-theme-namespace .mhe-button:focus {
   outline: 2px solid #33c5f4;
 }
-/* line 21, ../../src/native_elements/mhe-button.scss */
-.mhe-theme-namespace button:disabled, .mhe-theme-namespace .mhe-button:disabled {
+/* line 34, ../../src/native_elements/mhe-button.scss */
+.mhe-theme-namespace button:disabled, .mhe-theme-namespace button.disabled, .mhe-theme-namespace .mhe-button:disabled, .mhe-theme-namespace .mhe-button.disabled {
   background-color: #cccccc;
-  color: #666666;
+  color: #a3a3a3;
 }
 /* line 1, ../../src/native_elements/mhe-h1-through-h6.scss */
 .mhe-theme-namespace h1, .mhe-theme-namespace h2, .mhe-theme-namespace h3, .mhe-theme-namespace h4, .mhe-theme-namespace h5, .mhe-theme-namespace h6 {
@@ -93,24 +155,50 @@
 }
 /* line 1, ../../src/native_elements/mhe-input.scss */
 .mhe-theme-namespace input {
-  border: 1px solid #cccccc;
-  background-color: white;
-  box-shadow: 0 0 10px #8f8f8f;
-  padding: 0px 7px;
-  vertical-align: middle;
+  border: 3px solid #f37921;
+  box-shadow: 10px 10px 5px #888888;
+  padding: 2px 7px;
 }
 /* line 1, ../../src/native_elements/mhe-textarea.scss */
 .mhe-theme-namespace textarea {
-  border: 3px solid #cccccc;
-  background-color: white;
-  padding: 2px;
+  border: 3px solid #f37921;
+  padding: 2px 7px;
 }
-/* line 5, ../../src/mhe-classes/background-and-border.scss */
-.mhe-theme-namespace .mhe-background-color {
+/* line 1, ../../src/native_elements/universal.scss */
+.mhe-theme-namespace * {
+  font-family: Helvetica, sans;
+}
+/* line 1, ../../src/mhe-classes/background-and-border.scss */
+.mhe-theme-namespace .mhe-background-color, .mhe-theme-namespace .rounddiv {
+  /* revist use of .rouddiv  */
   background-color: #fde6d5;
 }
-/* line 9, ../../src/mhe-classes/background-and-border.scss */
-.mhe-theme-namespace .mhe-border {
-  box-shadow: 10px 10px 5px #888888;
+/* line 5, ../../src/mhe-classes/background-and-border.scss */
+.mhe-theme-namespace .mhe-border, .mhe-theme-namespace .rounddiv {
+  /* revist use of .rouddiv  */
   border: 3px solid #f37921;
+}
+/* line 9, ../../src/mhe-classes/background-and-border.scss */
+.mhe-theme-namespace .mhe-box-shadow {
+  box-shadow: 10px 10px 5px #888888;
+}
+/* line 13, ../../src/mhe-classes/background-and-border.scss */
+.mhe-theme-namespace .mhe-padding {
+  padding: 2px 7px;
+}
+/* line 7, ../../src/widget_classes/drag-and-drop.scss */
+.mhe-theme-namespace .drop_object {
+  border: 3px solid #f37921;
+}
+/* line 8, ../../src/widget_classes/large-image-navigator.scss */
+.mhe-theme-namespace .thumb .ui-draggable-handle {
+  border: 3px solid #f37921 !important;
+}
+/* line 8, ../../src/widget_classes/outline-expander.scss */
+.mhe-theme-namespace .marker {
+  background-color: #f37921;
+}
+/* line 20, ../../src/widget_classes/outline-expander.scss */
+.mhe-theme-namespace .itemtext {
+  background-color: #b89814;
 }
