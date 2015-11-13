@@ -200,23 +200,22 @@
   cursor: pointer;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: purple;
 }
-/* line 15, ../../src/widget_classes/outline-expander.scss */
+/* line 14, ../../src/widget_classes/outline-expander.scss */
 .mhe-theme-namespace .marker.expanded {
   background-image: url("../images/downangle.svg");
   background-size: 18px;
 }
-/* line 19, ../../src/widget_classes/outline-expander.scss */
+/* line 18, ../../src/widget_classes/outline-expander.scss */
 .mhe-theme-namespace .marker.contracted {
   background-image: url("../images/rightangle.svg");
   background-size: 14px;
 }
-/* line 24, ../../src/widget_classes/outline-expander.scss */
+/* line 23, ../../src/widget_classes/outline-expander.scss */
 .mhe-theme-namespace .leaf .marker {
   background-color: transparent;
 }
-/* line 29, ../../src/widget_classes/outline-expander.scss */
+/* line 28, ../../src/widget_classes/outline-expander.scss */
 .mhe-theme-namespace .itemtext {
   background-color: #a1cdd2;
 }
