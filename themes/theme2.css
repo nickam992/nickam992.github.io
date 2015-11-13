@@ -194,11 +194,29 @@
 .mhe-theme-namespace .thumb .ui-draggable-handle {
   border: 3px solid #f37921 !important;
 }
-/* line 8, ../../src/widget_classes/outline-expander.scss */
+/* line 7, ../../src/widget_classes/outline-expander.scss */
 .mhe-theme-namespace .marker {
   background-color: #f37921;
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: purple;
 }
-/* line 20, ../../src/widget_classes/outline-expander.scss */
+/* line 15, ../../src/widget_classes/outline-expander.scss */
+.mhe-theme-namespace .marker.expanded {
+  background-image: url("../images/downangle.svg");
+  background-size: 18px;
+}
+/* line 19, ../../src/widget_classes/outline-expander.scss */
+.mhe-theme-namespace .marker.contracted {
+  background-image: url("../images/rightangle.svg");
+  background-size: 14px;
+}
+/* line 24, ../../src/widget_classes/outline-expander.scss */
+.mhe-theme-namespace .leaf .marker {
+  background-color: transparent;
+}
+/* line 29, ../../src/widget_classes/outline-expander.scss */
 .mhe-theme-namespace .itemtext {
-  background-color: #b89814;
+  background-color: #ecb389;
 }
