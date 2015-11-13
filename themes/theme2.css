@@ -201,21 +201,11 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-/* line 14, ../../src/widget_classes/outline-expander.scss */
-.mhe-theme-namespace .marker.expanded {
-  background-image: url("../images/downangle.svg");
-  background-size: 18px;
-}
-/* line 18, ../../src/widget_classes/outline-expander.scss */
-.mhe-theme-namespace .marker.contracted {
-  background-image: url("../images/rightangle.svg");
-  background-size: 14px;
-}
-/* line 23, ../../src/widget_classes/outline-expander.scss */
+/* line 16, ../../src/widget_classes/outline-expander.scss */
 .mhe-theme-namespace .leaf .marker {
   background-color: transparent;
 }
-/* line 28, ../../src/widget_classes/outline-expander.scss */
+/* line 21, ../../src/widget_classes/outline-expander.scss */
 .mhe-theme-namespace .itemtext {
   background-color: #ecb389;
 }
