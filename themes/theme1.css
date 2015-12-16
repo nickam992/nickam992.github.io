@@ -1,4 +1,4 @@
-/* line 22, ../../src/themes/theme1.scss */
+/* line 1, ../../src/includes.scss */
 .mhe-theme-namespace {
   /*  This widget can be found in Mega CLO in Model: Templates 3
 
@@ -7,7 +7,8 @@
   */
   /* This widget can be found in Mega CLO towards the end of Model: Templates 2
 
-      This one will be tricky, because they've used <li> elements as buttons...
+      This one will be tricky, because it's built with React.js
+      they've used <li> elements as buttons...
       They're using CSS selectors like "#toggler.blue .buttons li.selected"
   */
   /*  This widget can be found in Mega CLO in Model: Templates 3
@@ -17,8 +18,6 @@
   */
   /*  This widget can be found in Mega CLO in Model: Templates 3
 
-      Kevin had some ideas on this, but I'm not sure there's any work
-      to be done here.
   */
   /*  This widget can be found in Mega CLO in Concept: Widgets and Templates 1
 
@@ -45,6 +44,10 @@
 
   */
   /*  This widget can be found in Mega CLO in Model: Templates 3
+
+      The Check Answer/Try Again button is styled and changed by
+      JavaScript setting inline styles.  Someone is going to have
+      to go tear out all the Javascript.
 
       I think the only thing to style here are the icons, which we
       are going to do later.
@@ -113,6 +116,14 @@
   background-color: #cccccc;
   color: #a3a3a3;
 }
+/* line 43, ../../src/native_elements/mhe-button.scss */
+.mhe-theme-namespace button .correct-answer-theme-state, .mhe-theme-namespace .mhe-button .correct-answer-theme-state {
+  background-color: green;
+}
+/* line 47, ../../src/native_elements/mhe-button.scss */
+.mhe-theme-namespace button .incorrect-answer-theme-state, .mhe-theme-namespace .mhe-button .incorrect-answer-theme-state {
+  background-color: red;
+}
 /* line 1, ../../src/native_elements/mhe-h1-through-h6.scss */
 .mhe-theme-namespace h1, .mhe-theme-namespace h2, .mhe-theme-namespace h3, .mhe-theme-namespace h4, .mhe-theme-namespace h5, .mhe-theme-namespace h6 {
   font-family: "Proxima Nova Light", Verdana, Helvetica, sans;
@@ -169,29 +180,138 @@
   font-family: "Proxima Nova Light", Verdana, Helvetica, sans;
 }
 /* line 1, ../../src/mhe-classes/background-and-border.scss */
-.mhe-theme-namespace .mhe-background-color, .mhe-theme-namespace .rounddiv {
-  /* revist use of .rouddiv  */
+.mhe-theme-namespace .mhe-theme-properties {
+  background-color: #def0f2;
+  border: 3px solid #39858e;
+  box-shadow: 5px 5px 5px #999999;
+  padding: 2px 7px;
+}
+/* line 7, ../../src/mhe-classes/background-and-border.scss */
+.mhe-theme-namespace .mhe-background-color {
   background-color: #def0f2;
 }
-/* line 5, ../../src/mhe-classes/background-and-border.scss */
-.mhe-theme-namespace .mhe-border, .mhe-theme-namespace .rounddiv {
-  /* revist use of .rouddiv  */
+/* line 10, ../../src/mhe-classes/background-and-border.scss */
+.mhe-theme-namespace .mhe-border {
   border: 3px solid #39858e;
 }
-/* line 9, ../../src/mhe-classes/background-and-border.scss */
+/* line 13, ../../src/mhe-classes/background-and-border.scss */
 .mhe-theme-namespace .mhe-box-shadow {
   box-shadow: 5px 5px 5px #999999;
 }
-/* line 13, ../../src/mhe-classes/background-and-border.scss */
+/* line 16, ../../src/mhe-classes/background-and-border.scss */
 .mhe-theme-namespace .mhe-padding {
   padding: 2px 7px;
 }
-/* line 7, ../../src/widget_classes/drag-and-drop.scss */
-.mhe-theme-namespace .drop_object {
-  border: 3px solid #39858e;
+/* line 21, ../../src/mhe-classes/background-and-border.scss */
+.mhe-theme-namespace.template-theme-properties, .mhe-theme-namespace .template-theme-properties {
+  background-color: #def0f2;
+  outline: 3px solid #39858e;
+  box-shadow: 5px 5px 5px #999999;
+  padding: 2px 7px;
+}
+/* line 27, ../../src/mhe-classes/background-and-border.scss */
+.mhe-theme-namespace.template-background-color, .mhe-theme-namespace .template-background-color {
+  background-color: #def0f2;
+}
+/* line 30, ../../src/mhe-classes/background-and-border.scss */
+.mhe-theme-namespace.template-border, .mhe-theme-namespace .template-border {
+  outline: 3px solid #39858e;
+}
+/* line 33, ../../src/mhe-classes/background-and-border.scss */
+.mhe-theme-namespace.template-box-shadow, .mhe-theme-namespace .template-box-shadow {
+  box-shadow: 5px 5px 5px #999999;
+}
+/* line 36, ../../src/mhe-classes/background-and-border.scss */
+.mhe-theme-namespace.template-padding, .mhe-theme-namespace .template-padding {
+  padding: 2px 7px;
+}
+/* line 1, ../../src/icons.scss */
+.mhe-theme-namespace .left-chevron-theme-icon {
+  background-image: url("icons/left-chevron-theme-icon.png");
+}
+/* line 4, ../../src/icons.scss */
+.mhe-theme-namespace .right-chevron-theme-icon {
+  background-image: url("icons/right-chevron-theme-icon.png");
+}
+/* line 7, ../../src/icons.scss */
+.mhe-theme-namespace .up-chevron-theme-icon {
+  background-image: url("icons/up-chevron-theme-icon.png");
+}
+/* line 10, ../../src/icons.scss */
+.mhe-theme-namespace .down-chevron-theme-icon {
+  background-image: url("icons/down-chevron-theme-icon.png");
+}
+/* line 13, ../../src/icons.scss */
+.mhe-theme-namespace .plus-theme-icon {
+  background-image: url("icons/plus-theme-icon.png");
+}
+/* line 16, ../../src/icons.scss */
+.mhe-theme-namespace .minus-theme-icon {
+  background-image: url("icons/minus-theme-icon.png");
+}
+/* line 19, ../../src/icons.scss */
+.mhe-theme-namespace .correct-answer-theme-icon {
+  background-image: url("icons/correct-answer-theme-icon.png");
+}
+/* line 22, ../../src/icons.scss */
+.mhe-theme-namespace .incorrect-answer-theme-icon {
+  background-image: url("icons/incorrect-answer-theme-icon.png");
+}
+/* line 25, ../../src/icons.scss */
+.mhe-theme-namespace .dropdown-list-theme-icon {
+  background-image: url("icons/dropdown-list-theme-icon.png");
+}
+/* line 28, ../../src/icons.scss */
+.mhe-theme-namespace .slider-handle-theme-icon {
+  background-image: url("icons/slider-handle-theme-icon.png");
+}
+/* line 31, ../../src/icons.scss */
+.mhe-theme-namespace .layer-reveal-handle-theme-icon {
+  background-image: url("icons/layer-reveal-handle-theme-icon.png");
+}
+/* line 34, ../../src/icons.scss */
+.mhe-theme-namespace .active-progress-dot-theme-icon {
+  background-image: url("icons/active-progress-dot-theme-icon.png");
+}
+/* line 37, ../../src/icons.scss */
+.mhe-theme-namespace .inactive-progress-dot-theme-icon {
+  background-image: url("icons/inactive-progress-dot-theme-icon.png");
+}
+/* line 40, ../../src/icons.scss */
+.mhe-theme-namespace .slideline-navigator-theme-element {
+  background-color: darkgray;
+}
+/* line 43, ../../src/icons.scss */
+.mhe-theme-namespace .flip-theme-icon {
+  background-image: url("icons/flip-theme-icon.png");
+}
+/* line 46, ../../src/icons.scss */
+.mhe-theme-namespace .slider-line-theme-element {
+  background-color: gray;
+  height: 5px;
+}
+/* line 50, ../../src/icons.scss */
+.mhe-theme-namespace .home-theme-icon {
+  background-image: url("icons/home-theme-icon.png");
+}
+/* line 53, ../../src/icons.scss */
+.mhe-theme-namespace .back-theme-icon {
+  background-image: url("icons/back-theme-icon.png");
+}
+/* line 56, ../../src/icons.scss */
+.mhe-theme-namespace .map-theme-icon {
+  background-image: url("icons/map-theme-icon.png");
+}
+/* line 59, ../../src/icons.scss */
+.mhe-theme-namespace .selected-radio-theme-icon {
+  background-image: url("icons/selected-radio-theme-icon.png");
+}
+/* line 62, ../../src/icons.scss */
+.mhe-theme-namespace .unselected-radio-theme-icon {
+  background-image: url("icons/unselected-radio-theme-icon.png");
 }
 /* line 8, ../../src/widget_classes/large-image-navigator.scss */
-.mhe-theme-namespace .thumb .ui-draggable-handle {
+.mhe-theme-namespace #large-image .wrap {
   border: 3px solid #39858e !important;
 }
 /* line 7, ../../src/widget_classes/outline-expander.scss */
