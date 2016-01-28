@@ -5,7 +5,7 @@
         <link rel="stylesheet" type="text/css" href="css/core.css">
     </head>
 
-    <body>
+    <body ng-app="myApp" ng-controller="myCtrl">
         <h1>Nick Myers</h1>
 
         <img src="images/spock.png" style="height:400px;">
@@ -19,12 +19,31 @@
         <br>
         <a href="themes/theme3.css">Theme3</a>
 
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-sanitize.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-animate.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-cookies.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.js"></script>
 
+
+
+        <script>
+            var app = angular.module('myApp', []);
+            app.controller('myCtrl', function($scope) {
+                $scope.firstName= "John";
+                $scope.lastName= "Doe";
+            });
+        </script>
+
+
+
+        <script src="DLE-Player-team-files/scripts/notes.module.js"></script>
+        <script src="DLE-Player-team-files/scripts/notes.factory.js"></script>
+        <script src="DLE-Player-team-files/scripts/iframeInstructorNotes.directive.js"></script>
+        <script src="DLE-Player-team-files/scripts/annotationUtil.factory.js"></script>
+        <script src="DLE-Player-team-files/scripts/highlights.factory.js"></script>
+        <script src="DLE-Player-team-files/scripts/iframeHighlight.directive.js"></script>
+        <script src="DLE-Player-team-files/scripts/heatMap.factory.js"></script>
+        <script src="DLE-Player-team-files/scripts/iframeHeatMap.directive.js"></script>
+
+
+        <!--
         <script src="https://nickam992.github.io/DLE-Player-team-files/scripts/notes.module.js"></script>
         <script src="https://nickam992.github.io/DLE-Player-team-files/scripts/notes.factory.js"></script>
         <script src="https://nickam992.github.io/DLE-Player-team-files/scripts/iframeInstructorNotes.directive.js"></script>
@@ -33,6 +52,7 @@
         <script src="https://nickam992.github.io/DLE-Player-team-files/scripts/iframeHighlight.directive.js"></script>
         <script src="https://nickam992.github.io/DLE-Player-team-files/scripts/heatMap.factory.js"></script>
         <script src="https://nickam992.github.io/DLE-Player-team-files/scripts/iframeHeatMap.directive.js"></script>
+        -->
     </body>
 
 </html>
