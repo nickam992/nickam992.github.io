@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'icons';
+  src: url('../fonts/sample.eot?#') format('eot'), 
+       url('../fonts/sample.woff') format('woff'), 
+       url('../fonts/sample.ttf') format('truetype'); 
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background: url(../images/noise.jpg);
+}
+
+body {
+	font: 13px Verdana, Sans-Serif;
+}
+
+#page-wrap {
+	margin: 80px auto;
+	width: 960px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 0 0 20px 0;
+}
+td {
+	padding: 10px 5px;
+	text-align: center;
+	width: 16.66%;
+	font-size: 12px;
+}
+tr:first-child td {
+	font-size: 62px;
+	color: hsla(0, 50%, 50%, 1);
+}
+tr:first-child td:hover {
+	color: black;
+}
+h1 {
+	font: bold 50px Sans-Serif;
+	letter-spacing: -1px;
+}
+h2 {
+	margin-top: 30px;
+}
+h3 {
+	font-size: 30px;
+	margin: 20px 0;
+}
+a {
+	text-decoration: none;
+}
+ol, ul {
+	margin: 20px;
+}
+li {
+	margin: 10px 0;
+}
+ul li {
+	margin: 0 0 30px 0;
+}
+p, pre {
+	margin: 0 0 10px 0;
+}
+pre, body style {
+	display: block;
+	white-space: pre;
+	background: #f3f1ea;
+	padding: 15px;
+	border-radius: 5px;
+	font: 12px Monaco, MonoSpace;
+}
+.row-of-icons {
+	margin: 10px 0;
+}

@@ -2,7 +2,6 @@
 <html>
     <head>
         <title>Nick's stuff</title>
-        <link rel="stylesheet" type="text/css" href="css/core.css">
     </head>
 
     <body ng-app="myApp" ng-controller="myCtrl">
@@ -19,16 +18,26 @@
         <br>
         <a href="themes/theme3.css">Theme3</a>
 
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
 
 
 
         <script>
             var app = angular.module('myApp', []);
             app.controller('myCtrl', function($scope) {
-                $scope.firstName= "John";
-                $scope.lastName= "Doe";
             });
+
+
+            var layout = angular
+                .module(
+                    'player.layout',
+                    [
+                        'player.core',
+                        'player.shared',
+                        'player.overflow',
+                        'player.iframe'
+                    ]
+                );
         </script>
 
 
