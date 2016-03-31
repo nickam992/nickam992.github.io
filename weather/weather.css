@@ -1,0 +1,17 @@
+.day{
+	height: 200px;
+	width: 150px;
+	border: 1px solid black;
+	display: inline-block;
+	text-align: center;
+	padding: 10px;
+}
+.high, .low{
+	font-size: 30px;
+}
+.high{
+	color: red;
+}
+.low{
+	color: blue;
+}

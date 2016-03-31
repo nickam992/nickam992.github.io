@@ -8,14 +8,14 @@ var config = DarkSkyAPIConfigurations();
 
 if (navigator.geolocation)
 {
-    navigator.geolocation.getCurrentPosition(successFunction, errorFunction);
+    navigator.geolocation.getCurrentPosition(geolocationSuccessFunction, geolocationErrorFunction);
 }
 else
 {
     alert("Gelocation is not available");
 }
 
-function successFunction(position)
+function geolocationSuccessFunction(position)
 {
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
@@ -23,7 +23,7 @@ function successFunction(position)
     getWeatherData(latitude, longitude);
 }
 
-function errorFunction(position)
+function geolocationErrorFunction(position)
 {
     alert("Gelocation is not available");
 }
@@ -41,17 +41,23 @@ function getWeatherData(latitude, longitude){
 
 
 function displayWeatherData(data){
+    console.log(data)
     var days = $(".day");
 
-    for(var i=0; i<5; i++){
-        var maxTemp = data.daily.data[i].temperatureMax;
-        var minTemp = data.daily.data[i].temperatureMin;
+    try{
+        for(var i=0; i<5; i++){
+            var maxTemp = data.daily.data[i].temperatureMax;
+            var minTemp = data.daily.data[i].temperatureMin;
 
-        var icon = data.daily.data[i].icon;
-        var iconPath = config.icons[icon];
+            var icon = data.daily.data[i].icon;
+            var iconPath = config.icons[icon];
 
-        $(days[i]).append("<div class='high'>" + Math.round(maxTemp) + "</div>");
-        $(days[i]).append("<div><img src= '" + iconPath + "'></img></div>");
-        $(days[i]).append("<div class='low'>" + Math.round(minTemp) + "</div>");
+            $(days[i]).append("<div class='high'>" + Math.round(maxTemp) + "</div>");
+            $(days[i]).append("<div><img src= '" + iconPath + "'></img></div>");
+            $(days[i]).append("<div class='low'>" + Math.round(minTemp) + "</div>");
+        }
+    }
+    catch(e){
+        alert("Weather data could not be displayed");
     }
 }
