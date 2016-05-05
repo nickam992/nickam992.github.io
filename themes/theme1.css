@@ -177,7 +177,7 @@
 }
 /* line 1, ../../src/native_elements/universal.scss */
 .mhe-theme-namespace * {
-  font-family: "Proxima Nova Light", Verdana, Helvetica, sans;
+  font-family: "Proxima Nova Light", ProximaNova, Verdana, Helvetica, sans;
 }
 /* line 1, ../../src/mhe-classes/background-and-border.scss */
 .mhe-theme-namespace .mhe-theme-properties {
