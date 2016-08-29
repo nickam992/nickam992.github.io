@@ -1,13 +1,8 @@
-notSet = true;
 $("#bet").click(bet);
 $("#bet1000").click(bet1000);
 
 function bet() {
-	var startingMoney = parseInt($("#startingMoney").val())
-	if (notSet === true) {
-		$("#currentMoney").html(startingMoney)
-		notSet = false;
-	}
+	var startingMoney = parseInt($("#startingMoney").val());
 	$("#startingMoney").attr("disabled", "disabled");
 	var rand = Math.random();
 	var numWagers = parseInt($("#numWagers").html());
@@ -46,4 +41,17 @@ function bet1000() {
 			break;
 		}
 	}
+}
+
+
+window.setTimeout(function() {
+	var startingMoney = document.getElementById("startingMoney");
+	var currentMoney = document.getElementById("currentMoney");
+	bindText(startingMoney, currentMoney);
+}, 100);
+
+function bindText(elem, target) {
+	elem.addEventListener("input", function() {
+		target.innerHTML = elem.value;
+	});
 }
