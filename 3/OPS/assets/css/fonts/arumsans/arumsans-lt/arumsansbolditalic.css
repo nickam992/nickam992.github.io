@@ -1,0 +1,12 @@
+/* Webfont: ArumSansBoldItalic */@font-face {
+    font-family: 'ArumSansLt';
+    src: url('ArumSansBoldItalic.eot'); /* IE9 Compat Modes */
+    src: url('ArumSansBoldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('ArumSansBoldItalic.woff') format('woff'), /* Modern Browsers */
+         url('ArumSansBoldItalic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('ArumSansBoldItalic.svg#ArumSansBoldItalic') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+

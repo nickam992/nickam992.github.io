@@ -1,0 +1,12 @@
+/* Webfont: VectipedeRg-Bold */@font-face {
+    font-family: 'VectipedeRg';
+    src: url('VectipedeRg-Bold.eot'); /* IE9 Compat Modes */
+    src: url('VectipedeRg-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('VectipedeRg-Bold.woff') format('woff'), /* Modern Browsers */
+         url('VectipedeRg-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('VectipedeRg-Bold.svg#VectipedeRg-Bold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+

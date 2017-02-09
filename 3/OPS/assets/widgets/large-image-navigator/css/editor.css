@@ -1,0 +1,229 @@
+body {
+    background: #f6f6f6;
+    font-family: 'ProximaNova', sans-serif;
+}
+
+div.container {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+h4 {
+    font-weight: bold;
+}
+
+.sidebar {
+    padding-top: 8px;
+}
+
+.file-upload-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.5);
+    cursor: wait;
+}
+
+#preview {
+    margin-top: 14px;
+}
+
+.menu-section {
+    margin-bottom: 16px;
+}
+
+.menu-section .title {
+    background: #e6e7e8;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-bottom: 4px;
+    box-shadow: 1px 1px 1px #ccc;
+}
+
+.menu-section .title h4 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.show-hide-section {
+    display: inline-block;
+}
+
+.pin-unpin-section {
+    float: right;
+    margin-top: 6px;
+    display: none;
+}
+
+.open .pin-unpin-section {
+    display: inline-block;
+}
+
+.section-footer-actions {
+    margin-top: 10px;
+}
+
+.menu-item {
+    box-shadow: 1px 1px 1px #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 4px;
+    background: #e6e7e8;
+}
+
+.section-content {
+    display: none;
+}
+
+.open .section-content {
+    display: block;
+}
+
+.right-actions {
+    margin-bottom: 4px;
+}
+
+.foot-actions {
+    margin-top: 4px;
+}
+
+.right-actions .btn-link,
+.foot-actions .btn-link {
+    padding: 0px;
+}
+
+.right-actions .action {
+    margin-left: 5px;
+    float: right;
+    display: block;
+}
+
+.drag-handle {
+    cursor: move;
+}
+
+.right-actions .drag-handle {
+    margin-top: 1px;
+}
+
+button.save {
+    margin-bottom: 10px;
+}
+
+.file-input-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0;
+    margin-bottom: -4px;
+    padding: 0;
+}
+
+.file-input-container button {
+    float: left;
+}
+
+.file-input-container input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.image .progress {
+    margin-bottom: 0;
+}
+
+#main-section .image {
+    padding: 7px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+    background: white;
+}
+
+.image .right-actions .delete {
+    position: relative;
+    top: -4px;
+}
+
+#viewport-color {
+    display: block;
+}
+
+.cke_inner {
+    position: relative !important;
+}
+
+.cke_top {
+    position: absolute !important;
+    opacity: 0;
+    transition: opacity 0.15s ease-in-out !important;
+    bottom: calc(100% + 1px);
+    left: -9999px;
+    border: 1px solid #bbb !important;
+}
+
+.cke_focus .cke_top {
+    opacity: 1;
+    left: 0;
+}
+
+/* ckeditor image plugin */
+
+#fileUploader.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+}
+#fileUploader.btn:active,
+#fileUploader.btn.expanded {
+    background-color: #2d6ca2;
+    background-position: 0 -15px;
+    border-color: #2b669a;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    padding:7px 11px 5px 13px;
+}
+#fileUploader.btn-primary {
+    font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    min-width:90px;
+    background-image: -webkit-linear-gradient(top, #428bca 0%, #2d6ca2 100%);
+    background-image:      -o-linear-gradient(top, #428bca 0%, #2d6ca2 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#428bca), to(#2d6ca2));
+    background-image:         linear-gradient(to bottom, #428bca 0%, #2d6ca2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff2d6ca2', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    background-repeat: repeat-x;
+    border-color: #2b669a;
+    color:white;
+}
+
+#sendFile.btn {
+    display: none;
+}

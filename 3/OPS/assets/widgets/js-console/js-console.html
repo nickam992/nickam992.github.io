@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>JS Console</title>
+
+        <!--
+        LIBRARY LICENSES
+
+        Google Prettify     - Apache 2.0 Authors - https://code.google.com/p/google-code-prettify/people/list
+        jQuery 1.8.3        - MIT The jQuery Foundation and other contributors (https://github.com/jquery/jquery)
+        -->
+
+        <!-- Required javascript libraries. -->
+        <script src="lib/jquery-1.8.3.min.js"></script>
+        <script src="lib/google-prettify/prettify.js"></script>
+    
+        <!-- Widget 's9.*' API that provides platform features. See https://docs.inkling.com. -->
+        <script src="../shared/s9-widget.js"></script>  
+
+        <!-- JS Console widget javascript. -->
+        <script src="js-console.js"></script>
+
+        <!-- Basic widget styles -->
+        <link rel="stylesheet" href="../shared/s9-widget.css" type="text/css">
+
+        <!-- Google Prettify stylesheet for syntax highlighting -->
+        <link rel="stylesheet" href="lib/google-prettify/prettify.css" type="text/css" />
+
+        <!-- JS Console widget styles -->
+        <link rel="stylesheet" href="js-console.css" type="text/css">
+    </head>
+    <body>
+        <div class="results">
+            <!-- Results get added here. -->
+        </div>
+        <form>
+            <textarea class="textarea textarea--full" id="input" placeholder="enter command" autocorrect="off" autocomplete="off" autocapitalize="off"></textarea>
+            <div class="btn-group">
+                <button class="btn" type="submit" id="run">Run</button>
+                <button class="btn" id="cancel">Cancel</button>
+            </div>
+        </form>
+    </body>
+</html>

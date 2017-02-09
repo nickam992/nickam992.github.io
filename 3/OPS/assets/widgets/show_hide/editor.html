@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Show/Hide Widget Editor</title>
+    <!-- Show/Hide Widget CSS. -->
+    <link rel="stylesheet" href="../shared/inklingwidget.css" />
+    <link rel="stylesheet" href="css/editor.css" />
+    <!-- Required javascript libraries. -->
+    <script src="../shared/jquery-2.1.1.min.js"></script>
+    <!-- Basic widget javascript -->
+    <script src="../shared/inklingwidget.js"></script>
+
+    <!-- Show/Hide Widget JS. -->
+    <script src="js/editor.js"></script>
+
+</head>
+
+<body class="editor">
+<div id="editor-container">
+    <div class="buttonContainer" id="show">
+        <span id="show-header">Button Normal State</span>
+        <div class="show-button-text">
+            <input type="text" placeholder="Show Answer" maxlength = "60">
+        </div>
+    </div>
+    <div class="buttonContainer" id="hide">
+        <span id="hide-header">Button Active State</span>
+        <div class="hide-button-text">
+            <input type="text" placeholder="Hide Answer" maxlength = "60">
+        </div>
+    </div>
+    <span id="answer-header">Answer</span>
+    <div class="group" id="answer">
+        <menu class="button-menu vert-right">
+            <div class="button btn-add-image imageEditor" name="Add Image">
+                <input id="imagePicker" type="file">
+            </div>
+        </menu>
+        <textarea placeholder="Add Answer" wrap="soft" id="answerText"></textarea>
+    </div>
+    <div class="group" id="imageGroup" style="display: none">
+        <menu class="button-menu vert-right" id="imageButtons">
+            <div class="button btn-replace" name="Swap Image">
+                <input id="swapButton" type="file">
+            </div>
+            <div class="button btn-delete" name="Delete Image">
+            </div>
+        </menu>
+        <div class="image">
+            <img id="imageContainer" style="display:none">
+        </div>
+    </div>
+</div>
+</body>
+</html>

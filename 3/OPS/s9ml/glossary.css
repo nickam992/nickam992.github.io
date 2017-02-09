@@ -1,0 +1,38 @@
+.glossary-headword {
+	font-weight: bold;
+}
+
+.glossary-pronunciation {
+	font-weight: normal;
+}
+
+.glossary-images {
+	display: table;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.glossary-images img {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-width: 100px;
+}
+
+.glossary-image {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.mhe-inline-credit {
+	display: none;
+}
+
+.glossary-image img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.hidden-by-default {
+	display: none;
+}

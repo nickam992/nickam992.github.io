@@ -1,0 +1,8 @@
+@import url("../../../widget_data/fonts/proxima-nova/proxima-nova-regular.css");
+@import url("../../../widget_data/fonts/proxima-nova/proxima-nova-regular-it.css");
+@import url("../../../widget_data/fonts/proxima-nova/proxima-nova-bold.css");
+@import url("../../../widget_data/fonts/proxima-nova/proxima-nova-bold-it.css");
+
+body {
+	font-family: "ProximaNova", sans-serif;
+}

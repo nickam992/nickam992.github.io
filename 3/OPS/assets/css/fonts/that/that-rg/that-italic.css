@@ -1,0 +1,12 @@
+/* Webfont: That-Italic */@font-face {
+    font-family: 'ThatRg';
+    src: url('That-Italic.eot'); /* IE9 Compat Modes */
+    src: url('That-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('That-Italic.woff') format('woff'), /* Modern Browsers */
+         url('That-Italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('That-Italic.svg#That-Italic') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

@@ -1,0 +1,12 @@
+/* Webfont: STIXMathJax_Main-Bold */@font-face {
+    font-family: 'STIXMathJaxMain';
+    src: url('STIXMathJax_Main-Bold.eot'); /* IE9 Compat Modes */
+    src: url('STIXMathJax_Main-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('STIXMathJax_Main-Bold.woff') format('woff'), /* Modern Browsers */
+         url('STIXMathJax_Main-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('STIXMathJax_Main-Bold.svg#STIXMathJax_Main-Bold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Large Image Navigator</title>
+
+        <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <script src="lib/jquery-1.11.1.js"></script>
+        <script src="lib/jquery-ui.min.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="lib/underscore-min.js"></script>
+        <script src="lib/backbone-min.js"></script>
+        <script src="../shared/ckeditor-mhe/ckeditor.js"></script>
+        <script src="../shared/ckeditor-mhe/adapters/jquery.js"></script>
+        <script src="lib/ckeditor-autogrow.js"></script>
+        <script src="js/ckeditor-imageupload.js"></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <link href="css/mhe.css" rel="stylesheet">
+        <link href="css/viewer.css" rel="stylesheet">
+        <link href="css/editor.css" rel="stylesheet">
+        <script src="js/app.js"></script>
+        <script src="js/utils.js"></script>
+        <script src="js/persistence.js"></script>
+        <script src="js/parent.js"></script>
+
+        <script src="js/models/widgetmodel.js"></script>
+
+        <script src="js/editor/views/sectionview.js"></script>
+        <script src="js/editor/views/editorview.js"></script>
+        <script src="js/editor/views/configsectionview.js"></script>
+        <script src="js/editor/views/titlesectionview.js"></script>
+        <script src="js/editor/views/mainimagesectionview.js"></script>
+        <script src="js/editor/views/thumbnailsectionview.js"></script>
+        <script src="js/editor/views/captionsectionview.js"></script>
+        <script src="js/editor/views/imageview.js"></script>
+
+        <script src="js/viewer/views/viewerview.js"></script>
+        <script src="js/viewer/views/largeimageview.js"></script>
+        <script src="js/viewer/views/mapview.js"></script>
+
+        <script>
+            $(function() {
+                Widget.app = new Widget.App({
+                    editor: true,
+                    debug: location.hostname === 'localhost'
+                });
+                Widget.app.initialize();
+            });
+        </script>
+
+        <script type="text/template" id="editor-template">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4 sidebar">
+                        <div id="config-section" class="menu-section"></div>
+                        <div id="title-section" class="menu-section"></div>
+                        <div id="main-image-section"
+                             class="menu-section"></div>
+                        <div id="thumbnail-section" class="menu-section"></div>
+                        <div id="caption-section" class="menu-section"></div>
+                        <div class="file-upload-overlay"
+                             style="display: none;">&nbsp;</div>
+                    </div>
+                    <div id="preview" class="col-xs-8"></div>
+                </div>
+                <% if (showSave) { %>
+                    <button type="button" class="btn btn-success save">
+                        Save Widget Data
+                    </button>
+                <% } %>
+            </div>
+        </script>
+
+        <script type="text/template" id="config-section-template">
+            <div class="title clearfix">
+                <button type="button"
+                        class="mhe-button js-show-hide-section show-hide-section">
+                    <span class="mhe-icon mhe-icon-expand-section"></span>
+                </button>
+                <button class="mhe-button pin-unpin-section js-pin-unpin-section">
+                    <span class="mhe-icon mhe-icon-pin"></span>
+                </button>
+                <h4>Set Up</h4>
+            </div>
+            <div class="section-content">
+                <div class="content menu-item">
+                    <p class="form-group">
+                        <label for="thumbnail-corner">
+                            Thumbnail Corner
+                        </label>
+                        <select id="thumbnail-corner" class="form-control">
+                            <option value="top-left"
+                                <% if (thumbnailCorner == 'top-left') { %>
+                                    selected
+                                <% } %>
+                                >
+                                Top Left
+                            </option>
+                            <option value="top-right"
+                                <% if (thumbnailCorner == 'top-right') { %>
+                                    selected
+                                <% } %>
+                                >
+                                Top Right
+                            </option>
+                            <option value="bottom-left"
+                                <% if (thumbnailCorner == 'bottom-left') { %>
+                                    selected
+                                <% } %>
+                                >
+                                Bottom Left
+                            </option>
+                            <option value="bottom-right"
+                                <% if (thumbnailCorner == 'bottom-right') { %>
+                                    selected
+                                <% } %>
+                                >
+                                Bottom Right
+                            </option>
+                        </select>
+                    </p>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/template" id="title-section-template">
+            <div class="title clearfix">
+                <button type="button"
+                        class="mhe-button js-show-hide-section show-hide-section">
+                    <span class="mhe-icon mhe-icon-expand-section"></span>
+                </button>
+                <button class="mhe-button pin-unpin-section js-pin-unpin-section">
+                    <span class="mhe-icon mhe-icon-pin"></span>
+                </button>
+                <h4>Title</h4>
+            </div>
+            <div class="section-content">
+                <div class="content menu-item">
+                    <div class="form-group">
+                        <textarea class="title"><%= title %></textarea>
+                    </div>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/template" id="main-image-section-template">
+            <div class="title clearfix">
+                <button type="button"
+                        class="mhe-button js-show-hide-section show-hide-section">
+                    <span class="mhe-icon mhe-icon-expand-section"></span>
+                </button>
+                <button class="mhe-button pin-unpin-section js-pin-unpin-section">
+                    <span class="mhe-icon mhe-icon-pin"></span>
+                </button>
+                <h4>Primary Image</h4>
+            </div>
+            <div class="section-content">
+                <div class="content menu-item">
+                    <div class="main-image">
+                        <div class="image"></div>
+                    </div>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/template" id="thumbnail-section-template">
+            <div class="title clearfix">
+                <button type="button"
+                        class="mhe-button js-show-hide-section show-hide-section">
+                    <span class="mhe-icon mhe-icon-expand-section"></span>
+                </button>
+                <button class="mhe-button pin-unpin-section js-pin-unpin-section">
+                    <span class="mhe-icon mhe-icon-pin"></span>
+                </button>
+                <h4>Thumbnail</h4>
+            </div>
+            <div class="section-content">
+                <div class="content menu-item">
+                    <div class="thumb">
+                        <div class="image"></div>
+                        <p class="form-group">
+                            <label for="viewport-color">
+                                Viewport Color
+                            </label>
+                            <input id="viewport-color"
+                                   type="color"
+                                   value="#<%= viewportColor %>"/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/template" id="caption-section-template">
+            <div class="title clearfix">
+                <button type="button"
+                        class="mhe-button js-show-hide-section show-hide-section">
+                    <span class="mhe-icon mhe-icon-expand-section"></span>
+                </button>
+                <button class="mhe-button pin-unpin-section js-pin-unpin-section">
+                    <span class="mhe-icon mhe-icon-pin"></span>
+                </button>
+                <h4>Caption</h4>
+            </div>
+            <div class="section-content">
+                <div class="content menu-item">
+                    <div class="form-group">
+                        <textarea class="caption"><%= caption %></textarea>
+                    </div>
+                </div>
+            </div>
+        </script>
+
+        <script type="text/template" id="image-template">
+            <% if (state == 'empty') { %>
+                <div class="file-input-container">
+                    <button type="button" class="mhe-button">
+                        <span class="mhe-icon mhe-icon-add"></span>
+                        Add Image
+                    </button>
+                    <input type="file"/>
+                </div>
+            <% } else if (state == 'uploading') { %>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active"
+                            role="progressbar"
+                            aria-valuenow="45"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                            style="width:100%"></div>
+                </div>
+            <% } else if (state == 'existing') { %>
+                <div class="pull-right right-actions clearfix">
+                    <button class="mhe-button js-delete delete action">
+                        <span class="mhe-icon mhe-icon-trash"></span>
+                    </button>
+                </div>
+                <div class="image-name">
+                    <span class="mhe-icon mhe-icon-picture"></span>
+                    <%= name %>
+                </div>
+            <% } %>
+        </script>
+
+        <!-- Preview area, copy-pasted from index.html -->
+
+        <script type="text/template" id="viewer-template">
+            <div class="title clearfix"><%= title %></div>
+            <div id="large-image"></div>
+            <div class="caption clearfix"><%= caption %></div>
+        </script>
+
+        <script type="text/template" id="large-image-template">
+            <img src="<%= src %>" alt="" class="main"/>
+            <div class="map <%= thumbnailCorner %>"></div>
+        </script>
+
+        <script type="text/template" id="map-template">
+            <div class="thumb">
+                <img src="<%= src %>" alt=""/>
+                <div class="viewport"
+                     style="border-color: #<%= viewportColor %>;"></div>
+            </div>
+            <div class="controls">
+                <button class="js-zoom-in">
+                    <span class="mhe-icon mhe-icon-plus"></span>
+                </button>
+                <button class="js-zoom-out">
+                    <span class="mhe-icon mhe-icon-minus"></span>
+                </button>
+            </div>
+        </script>
+
+        <!-- End of preview area copy-pasted from index.html -->
+
+    </head>
+
+    <body></body>
+
+</html>

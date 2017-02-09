@@ -1,0 +1,9 @@
+.glossary-images {
+	display: flex;
+	height: 200px;
+	width: 1000px;
+}
+
+.glossary-image {
+	flex: 1;
+}

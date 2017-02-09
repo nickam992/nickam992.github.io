@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Fliptip</title>
+
+        <!--
+        LIBRARY LICENSES
+
+        jQuery 1.8.3  - MIT 2013 The jQuery Foundation and other contributors (https://github.com/jquery/jquery)
+        fastclick     - MIT 2012 The Financial Times Ltd (https://github.com/ftlabs/fastclick)
+        Handlebars    - MIT 2011 Yehuda Katz (https://github.com/wycats/handlebars.js/)
+        -->
+
+        <!-- Required javascript libraries. -->
+        <script src="lib/jquery-1.8.3.min.js"></script>
+        <script src="lib/fastclick.js"></script>
+        <script src="lib/handlebars.js"></script>
+
+        <!-- Widget 's9.*' API that provides platform features. See https://docs.inkling.com for documentation. -->
+        <script src="../shared/s9-widget.js"></script>  
+
+        <!-- Handlebars template for individual fliptip card. -->
+        <script type="text/html" id="card_template">
+        {{#each cards}} 
+            <div class="card">
+                <div class="front">
+                    <div class="dt">
+                    {{! transmogrify is a helper that will parse out images }}
+                    {{transmogrify front}}
+                </div>
+            </div>
+            <div class="back">
+                <div class="dd">
+                    {{transmogrify back}}
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+        </script>
+
+        <!-- Fliptip widget JS. -->
+        <script src="fliptip.js"></script>
+
+        <!-- Basic widget styles -->
+        <link rel="stylesheet" href="../shared/s9-widget.css">
+
+        <!-- Fliptip CSS for styling fliptip cards and card container. -->
+        <link rel="stylesheet" href="fliptip.css" />
+    </head>
+    <body>
+        <div id="card_container"></div>
+    </body>
+</html>

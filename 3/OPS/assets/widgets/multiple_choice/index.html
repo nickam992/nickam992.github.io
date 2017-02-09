@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Multiple Choice Assessment Widget</title>
+
+        <!-- Required javascript libraries. -->
+        <script src="../shared/jquery-2.1.1.min.js"></script>
+        <!-- Basic widget javascript -->
+        <script src="../shared/inklingwidget.js"></script>
+        <!-- Basic widget styles -->
+        <link rel="stylesheet" href="../shared/inklingwidget.css">
+
+        <!-- Handlebars library (http://handlebarsjs.com/) -->
+        <script src="../shared/handlebars.js"></script>
+
+        <!-- Multiple Choice Assessment Widget CSS. -->
+        <link rel="stylesheet" href="css/main.css" />
+        <!-- Multiple Choice Assessment Widget JS. -->
+        <script src="js/main.js"></script>
+
+        <!-- Handlebars setup -->
+        <script class="answer" type="text/x-handlebars-template">
+            {{#each answerData}}
+            <li class="answer answer{{number}}"><span class="enumeration">{{enumeration}}</span>{{answer}}</li>
+            {{/each}}
+        </script>
+        <script>
+         if (document.location.hostname == "localhost" ||
+            document.location.hostname == "10.8.8.65"){
+             var answer1 = {
+                    'optionalText': 'The nucleaus should be identifiable by the nuclear envelope, the double-membrane that surrounds it.',
+                    'answer': 'water'
+                };
+                var answer2 = {
+                    'optionalText': 'Less than 1% of the atmosphere is CO2, but that is enough to support photosynthesiLess than 1% of the atmosphere is CO2, but that is enough to support photosynthesisLess than 1% of the atmosphere is CO2, but that is enough to support photosynthesisLess than 1% of the atmosphere is CO2, but that is enough to support photosynthesisLess than 1% of the atmosphere is CO2, but that is enough to support photosynthesisLess than 1% of the atmosphere is CO2, but that is enough to support photosynthesiss.',
+                    'answer': 'carbon dioxide'
+                };
+                var answer3 = {
+                    'optionalText': 'The nucleaus should be identifiable by the nuclear envelope, the double-membrane that surrounds it.',
+                    'answer': 'cholorphyll'
+                };
+                var answer4 = {
+                    'optionalText': 'The nucleaus should be identifiable by the nuclear envelope, the double-membrane that surrounds it.',
+                    'answer': 'the Sun'
+                };
+                var answer5 = {
+                    'optionalText': 'The nucleaus should be identifiable by the nuclear envelope, the double-membrane that surrounds it.The nucleaus should be identifiable by the nuclear envelope, the double-membrane that surrounds it.e nucleaus should be identifiable by the nuclear envelope, the double-membrane that surrounds it.The nucleaus should be identifiable by the nuclear envelope, the double-membrane that surrounds it.e nucleaus should be identifiable by the nuclear envelope, the double-membrane that surrounds it.The nucleaus should be identifiable by the nucleaus should be identifiable by the nuclear envelope, the double-membrane that surrounds it.The nucleaus should be identifiable by the nuclear envelope, the double-membrane that surrounds it.e nuclear envelope, the double-membrane that surrounds it.',
+                    'answer': 'soil'
+                };
+            s9.initialParams = {
+                'title': 'Question 1',
+                'question':  'In photosynthesis, plants use carbon from _______ to make sugar and other organic molecules.',
+                'answers': JSON.stringify([answer1, answer2, answer3, answer4, answer5]),
+                'hint' : 'see page 4',
+                'correct': 'answer2',
+                'shuffle': 'true',
+                'imgSrc': 'test.png'
+            };
+        }
+        </script>
+    </head>
+    <body>
+        <div class="widget_container">
+            <div class="question_stem">
+                <span>Question #</span>
+                <p>Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper?</p>
+            </div>
+            <div id="answerImg"></div>
+            <ul class="answer_set"></ul>
+            <div class="feedback">
+                <div class="feedback_text feedback_hint">
+                    <span >Hint</span>
+                    <p>Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper.</p>
+                </div>
+                <div class="feedback_text feedback_incorrect">
+                    <span >Not Quite</span>
+                    <p>Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper.</p>
+                </div>
+                <div class="feedback_text feedback_correct">
+                    <span >That's Correct!</span>
+                    <p>Cras mattis consectetur purus sit amet fermentum. Vestibulum id ligula porta felis euismod semper.</p>
+                </div>
+            </div>
+            <div class="interactions">
+                <div class="answer_button disabled">Check Answer</div>
+                <div class="help_buttons">
+                    <span>Stuck?</span>
+                    <span class="help show_hint">Get a hint!</span>
+                    <span class="help show_answer">Show Answer</span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

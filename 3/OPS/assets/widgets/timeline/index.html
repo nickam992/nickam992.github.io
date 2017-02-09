@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+     
+    88888888888 d8b                        888 d8b                888888   d8888b  
+        888     Y8P                        888 Y8P                   88b d88P  Y88b 
+        888                                888                       888 Y88b
+        888     888 88888b d88b     d88b   888 888 88888b     d88b   888   Y888b
+        888     888 888  888  88b d8P  Y8b 888 888 888  88b d8P  Y8b 888      Y88b
+        888     888 888  888  888 88888888 888 888 888  888 88888888 888        888 
+        888     888 888  888  888 Y8b      888 888 888  888 Y8b      88P Y88b  d88P 
+        888     888 888  888  888   Y8888  888 888 888  888   Y8888  888   Y8888P
+                                                                    d88P            
+                                                                  d88P             
+                                                                888P              
+     -->
+
+<head>
+    <title>TimelineJS Embed</title>
+    <meta charset="utf-8">
+    <meta name="description" content="TimelineJS Embed">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Style-->
+    <style>
+    html, body {
+        height:100%;
+        padding: 0px;
+        margin: 0px;
+    }
+    #timeline-embed {
+        height: 100%;
+    }
+    </style>
+    <script src="../shared/inklingwidget.js"></script>
+    <script type="text/javascript" src="js/storyjs-embed.js"></script>
+    <script src="../shared/jquery-2.1.1.min.js"></script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML elements-->
+    <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+</html>
+
+<body>
+    <!-- BEGIN Timeline Embed -->
+    <div id="timeline-embed"></div>
+    <script type="text/javascript">
+    var defaultSource = "js/timeline.json";
+    var defaultHeight = 650;
+
+    // var timelineParams = {
+    //     source: s9.initialParams['source'] ? s9.initialParams['source'] : defaultSource,
+    //     height: s9.initialParams['height'] ? parseInt(s9.initialParams['height']) : defaultHeight
+    // }
+
+    if (document.location.hostname == 'localhost') {
+        s9.initialParams = {
+
+            "date": JSON.stringify([{
+                "startDate": "2011,12,10",
+                "endDate": "2011,12,11,23,59,59",
+                "headline": "Headline Goes Here1",
+                "text": "<p>Body text goes here, some HTML is OK</p>",
+                "tag": "cheese",
+                "classname": "optionaluniqueclassnamecanbeaddedhere",
+                // "asset": {
+                //     "media": "",
+                //     "credit": "Credit Name Goes Here",
+                //     "caption": "Caption text goes here"
+                // }
+            }, {
+                "startDate": "2011,12,13",
+                "endDate": "2011,12,15",
+                "headline": "Headline Goes Here12",
+                "text": "<p>Body text goes here, some HTML is OK</p>",
+                "tag": "cheese, candy",
+                "classname": "optionaluniqueclassnamecanbeaddedhere"
+                // "asset": {
+                //     "media": "",
+                //     "credit": "Credit Name Goes Here",
+                //     "caption": "Caption text goes here"
+                // }
+            }]),
+            'titleSlide': '1'
+
+        }
+    }
+
+
+    console.log(s9.initialParams);
+    var params = s9.initialParams;
+
+    var timeline = {};
+    timeline.date = [];
+    var date = $.parseJSON(params.date);
+    for (var i in date) {
+        if (parseInt(i) + 1 == params['titleSlide']) {
+            timeline.headline = date[i].headline;
+            timeline.text = date[i].text;
+            timeline.type = 'default';
+            timeline.asset = date[i].asset;
+        } else {
+            timeline.date.push(date[i]);
+        }
+    }
+
+    function size() {
+         s9.view.size({
+            height: 650
+        })
+    }
+
+    $(function() {
+        size();
+        createStoryJS({
+            type: 'timeline',
+            height: 650,
+            width: '100%',
+            font: 'ptserif-ptsans',
+            source: {
+                "timeline": timeline
+            },
+            embed_id: 'timeline-embed'
+        });
+    });
+    $(window).on('load', size);
+    </script>
+    <!-- END Timeline Embed-->
+</body>
+
+</html>

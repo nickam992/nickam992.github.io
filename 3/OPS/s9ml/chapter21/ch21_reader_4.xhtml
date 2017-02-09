@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<html id="data-uuid-d9d0a244012d41e5849368b9fb11c37c" data-uuid="d9d0a244012d41e5849368b9fb11c37c" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>21.4 Beyond Simple Inheritance Patterns</title>
+        <meta charset="utf-8" />
+        <link type="text/css" rel="stylesheet" media="screen" href="../../assets/css/main.css" />
+    <link type="text/css" rel="stylesheet" href="../../assets/fonts/fonts.css" /><link type="text/css" rel="stylesheet" href="../../assets/css/epub_main.css" /><script src="../../assets/js/habitat_platform.js"></script></head>
+    <body class="chapter20 card-chapter-reader">
+        <header id="data-uuid-d9e3b8ecc0914a689d9335b27118320a" data-uuid="d9e3b8ecc0914a689d9335b27118320a">
+            <h1 id="data-uuid-c4916fd0b56e470bb4c783471d348a10" data-uuid="c4916fd0b56e470bb4c783471d348a10"><span class="enum">21.4</span> Beyond Simple Inheritance Patterns</h1>
+        </header>
+        <section id="data-uuid-58fe10de2c534f51903a15c12f2efc90" data-uuid="58fe10de2c534f51903a15c12f2efc90" class="sidenote sidenote-learning">
+            <h4 id="data-uuid-b08982fbbf814a86b32ed524402d9a16" data-uuid="b08982fbbf814a86b32ed524402d9a16">Learning Outcomes</h4>
+            <p id="data-uuid-4094924e2f7744038da409484cc73eb9" data-uuid="4094924e2f7744038da409484cc73eb9">Upon completion of this section, you should be able to</p>
+            <ol id="data-uuid-98ebfa53d1934878bf82d914e374c92f" data-uuid="98ebfa53d1934878bf82d914e374c92f" class="list-bold">
+                <li id="data-uuid-0dce2969de6d40e1973b79395bc04fde" data-uuid="0dce2969de6d40e1973b79395bc04fde">
+                    <p id="data-uuid-299c894ac67f42b4921003e9b3f3f2bf" data-uuid="299c894ac67f42b4921003e9b3f3f2bf"> Summarize how polygenic inheritance, pleiotropy, codominance, and incomplete dominance differ from simple one-trait crosses.</p>
+                </li>
+                <li id="data-uuid-2d3f3fcc310640439d1c527ffc15c0f2" data-uuid="2d3f3fcc310640439d1c527ffc15c0f2">
+                    <p id="data-uuid-b4da77e1128f4bc79a07460ef487a144" data-uuid="b4da77e1128f4bc79a07460ef487a144"> Explain how a combination of genetics and the environment can influence a phenotype.</p>
+                </li>
+                <li id="data-uuid-8a7a583a57f84324b8c008cca1326a4c" data-uuid="8a7a583a57f84324b8c008cca1326a4c">
+                    <p id="data-uuid-d4ecf10f0e9143dcaf3451c998f42abd" data-uuid="d4ecf10f0e9143dcaf3451c998f42abd"> Predict a person’s blood type based on his or her genotype.</p>
+                </li>
+            </ol>
+        </section>
+        <p id="data-uuid-f0b23c281f7a49168ad3cb42d726b4a0" data-uuid="f0b23c281f7a49168ad3cb42d726b4a0">Certain traits, such as those studied in <a href="ch21_reader_2.xhtml#data-uuid-49d79560a29a4a55ab2f6bd1beab52ae" class="link-inline">section 21.2</a>, are controlled by one set of alleles that follows a simple dominant or recessive inheritance. We now know of many other types of inheritance patterns.</p>
+        <h2 id="data-uuid-7c03ace4f64e477384a1593f5c8bdae8" data-uuid="7c03ace4f64e477384a1593f5c8bdae8">Polygenic Inheritance</h2>
+        <p id="data-uuid-3940b92ce2fa41feae3157fcbf6440d7" data-uuid="3940b92ce2fa41feae3157fcbf6440d7"><a href="../glossary.xhtml#key-polygenic-trait"><dfn title="polygenic trait">Polygenic traits</dfn></a><b>,</b> such as skin color and height, are governed by several sets of alleles. Each individual has a copy of all allelic pairs, possibly located on many different pairs of chromosomes. Each dominant allele codes for a product; therefore, the dominant alleles have a quantitative effect on the phenotype—that is, these effects are additive. The result is a <i>continuous variation</i> of phenotypes, resulting in a distribution of these phenotypes that resembles a bell-shaped curve. The more genes involved, the more continuous the variations and distribution of the phenotypes. Also, environmental effects cause many intervening phenotypes. In the case of height, differences in nutrition bring about a bell-shaped curve (<a href="ch21_reader_4.xhtml#data-uuid-3bf2fb1b19ed43fbbd5871cb858150e9" class="link-inline">Fig. 21.13</a>).</p>
+        <figure id="data-uuid-3bf2fb1b19ed43fbbd5871cb858150e9" data-uuid="3bf2fb1b19ed43fbbd5871cb858150e9">
+            <img src="../../img/chapter21/ch21_figure_text_13.png" id="data-uuid-7f636b2b97fe49a29c28abbace82922f" data-uuid="7f636b2b97fe49a29c28abbace82922f" class="text-image ch21_figure_text_13" alt="" />
+            <figcaption>
+                <span class="figure-number">
+                    <span class="figure-designation">Figure</span>
+                    <span class="figure-enumeration">21.13</span>
+                </span>
+                <span class="caption-title">Height is a polygenic trait in humans.</span>
+                <span class="caption-body">When you record the heights of a large group of people chosen at random, the values follow a bell-shaped curve. Such a continuous distribution is because of control of a trait by several sets of alleles. Environmental effects are also involved.</span>
+            </figcaption>
+        </figure>
+        <h3 id="data-uuid-15dd2d1b14b04401b4c6d73dc6aef7c7" data-uuid="15dd2d1b14b04401b4c6d73dc6aef7c7">Skin Color</h3>
+        <p id="data-uuid-cbb1d84866be4799b3c21d46d4a12825" data-uuid="cbb1d84866be4799b3c21d46d4a12825">Skin color is the result of pigmentation produced by cells called melanocytes in the skin (see <a href="../chapter04/ch04_reader_6.xhtml#data-uuid-fea9d2b647bf42b4829278695dcb9313" class="link-inline">section 4.6</a>). We now know that there are over 100 different genes that influence skin color. For simplicity, skin color is an example of a polygenic trait that is likely controlled by many pairs of alleles.</p>
+        <section id="data-uuid-7d1f618afb894e98a49ea42c35ccd56b" data-uuid="7d1f618afb894e98a49ea42c35ccd56b" class="sidenote sidenote-application">
+            <h4 id="data-uuid-048a916ea51c4a5aa673f2184be27d13" data-uuid="048a916ea51c4a5aa673f2184be27d13">science in your life</h4>
+            <h5 id="data-uuid-1357962e342a4a53a7182245fee3381c" data-uuid="1357962e342a4a53a7182245fee3381c">Is skin color a good indication of a person’s race?</h5>
+            <p id="data-uuid-5b452138f733417baea7e57ffebfdee6" data-uuid="5b452138f733417baea7e57ffebfdee6">The simple answer to this question is no, an individual’s skin color is not a true indicator of his or her genetic heritage. People of the same skin color are not necessarily genetically related. Because only a few genes control skin color, a person’s skin color may not indicate his or her ancestors’ origins. Scientists are actively investigating the genetic basis of race and have found some interesting relationships between a person’s genetic heritage and medicine. This will be explored in greater detail in <a href="../chapter23/ch23_reader_0.xhtml" class="link-inline">Chapter 23</a>.</p>
+        </section>
+        <p id="data-uuid-445e1dc2e4a74735b10e174c2650818a" data-uuid="445e1dc2e4a74735b10e174c2650818a">Even so, we will use the simplest model and will assume that skin has only three pairs of alleles (<i>Aa</i> and <i>Bb</i> and <i>Cc</i>) and that each capital letter contributes pigment to the skin. When a very dark person reproduces with a very light person, the children have medium-brown skin. When two people with the genotype<i> AaBbCc</i> reproduce with one another, individuals may range in skin color from very dark to very light. The distribution of these phenotypes typically follows a bell-shaped curve, meaning that few people have the extreme phenotypes and most people have the phenotype that lies in the middle. A bell-shaped curve is a common identifying characteristic of a polygenic trait (<a href="ch21_reader_4.xhtml#data-uuid-b435ad26ca9149fa98e9d9d17a0314c3" class="link-inline">Fig. 21.14</a>).</p>
+        <figure id="data-uuid-b435ad26ca9149fa98e9d9d17a0314c3" data-uuid="b435ad26ca9149fa98e9d9d17a0314c3">
+            <img src="../../img/chapter21/ch21_figure_text_14.png" id="data-uuid-307b491e1f6c4350a6f7edba547adac6" data-uuid="307b491e1f6c4350a6f7edba547adac6" class="text-image ch21_figure_text_14" alt="" />
+            <figcaption>
+                <span class="figure-number">
+                    <span class="figure-designation">Figure</span>
+                    <span class="figure-enumeration">21.14</span>
+                </span>
+                <span class="caption-title">Polygenic inheritance and skin color.</span>
+                <span class="caption-body">Skin color is controlled by many pairs of alleles, which results in a range of phenotypes. The vast majority of people have skin colors in the middle range, whereas fewer people have skin colors in the extreme range.</span>
+            </figcaption>
+        </figure>
+        <p id="data-uuid-fc948ac998f84cb8adcdde89e1d84b84" data-uuid="fc948ac998f84cb8adcdde89e1d84b84">However, skin color is also influenced by the sunlight in the environment. Notice again that a range of phenotypes exists for each genotype. For example, individuals who are <i>AaBbCc</i> may vary in their skin color, even though they possess the same genotype, and several possible phenotypes fall between the two extremes. The interaction of the environment with polygenic traits is discussed in the next section.</p>
+        <h3 id="data-uuid-ff43d38f726a4badae85503fd0c1fb76" data-uuid="ff43d38f726a4badae85503fd0c1fb76">Multifactorial Traits</h3>
+        <p id="data-uuid-1c66020a5ca64aee99ff8cf7f9c03f72" data-uuid="1c66020a5ca64aee99ff8cf7f9c03f72">Many human disorders, such as cleft lip and/or palate, clubfoot, schizophrenia, diabetes, phenylketonuria (see <a href="ch21_reader_0.xhtml#data-uuid-8b593c360867431bb49bbbc48af381b9" class="link-inline">chapter opener</a>), and even allergies and cancers, are most likely controlled by polygenes subject to environmental influences. These are commonly called <a href="../glossary.xhtml#key-multifactorial-trait"><dfn title="multifactorial trait">multifactorial traits</dfn></a><b>.</b> The coats of Siamese cats and Himalayan rabbits are darker in color at the ears, nose, paws, and tail (<a href="ch21_reader_4.xhtml#data-uuid-967934b7f7564a7ca288af2c01cec6f8" class="link-inline">Fig. 21.15</a>). Himalayan rabbits are homozygous for the allele <i>ch,</i> involved in the production of melanin. Experimental evidence suggests that the enzyme coded for by this gene is active only at a low temperature. Therefore, black fur occurs only at the extremities, where body heat is lost to the environment.</p>
+        <figure id="data-uuid-967934b7f7564a7ca288af2c01cec6f8" data-uuid="967934b7f7564a7ca288af2c01cec6f8" class="width-center">
+            <img src="../../img/chapter21/ch21_figure_15.png" id="data-uuid-4344ae0f9fd74f5f8d7c037988bf173c" data-uuid="4344ae0f9fd74f5f8d7c037988bf173c" alt="" />
+            <figcaption>
+                <span class="figure-number">
+                    <span class="figure-designation">Figure</span>
+                    <span class="figure-enumeration">21.15</span>
+                </span>
+                <span class="caption-title">Himalayan rabbit with temperature-susceptible coat color.</span>
+                <span class="caption-body">The dark ears, nose, and feet of this rabbit are believed to be because of a lower body temperature in these areas.</span>
+            </figcaption>
+        </figure>
+        <section id="data-uuid-8056e97d00694a618c59306baf0bdb18" data-uuid="8056e97d00694a618c59306baf0bdb18" class="sidenote sidenote-application">
+            <h4 id="data-uuid-d1c912afd876433781742f13510387ca" data-uuid="d1c912afd876433781742f13510387ca">Science in your life</h4>
+            <h5 id="data-uuid-1631489ac72844a398dfcee4fa1b835d" data-uuid="1631489ac72844a398dfcee4fa1b835d">Why do diet sodas carry the warning “Phenylketonurics: Contains Phenylalanine”?</h5>
+            <p id="data-uuid-212985c000664d74897d6b99de1bcd51" data-uuid="212985c000664d74897d6b99de1bcd51">The sweetener used in diet sodas is aspartame. Aspartame is formed by the combination of two amino acids: aspartic acid and phenylalanine. When aspartame is broken down by the body, phenylalanine is released. Phenylalanine can be toxic for those with PKU and must be avoided. Other foods high in phenylalanine include eggs, meat, milk, and bananas.</p>
+        </section>
+        <p id="data-uuid-f655dec06dc64862916b069d2e2662b2" data-uuid="f655dec06dc64862916b069d2e2662b2">Recent studies have reported that all sorts of behavioral traits, such as alcoholism, phobias, and even suicide, can be associated with particular genes. However, in almost all cases, the environment plays an important role in the severity of the phenotype. Therefore, they must be multifactorial traits. Current research focuses on determining what percentage of the trait is due to nature (inheritance) and what percentage is due to nurture (the environment). Some studies use identical and fraternal twins separated at birth and raised in different environments. The supposition is that, if identical twins in different environments share the same trait, that trait is most likely inherited. Identical twins are more similar in their intellectual talents, personality traits, and levels of lifelong happiness than are fraternal twins separated from birth. This substantiates the belief that behavioral traits are partly heritable. It also supports the belief that genes exert their effects by acting together in complex combinations susceptible to environmental influences.</p>
+        <h2 id="data-uuid-69c4c0f2b1e94dbdad852c782a4abb7d" data-uuid="69c4c0f2b1e94dbdad852c782a4abb7d">Pleiotropy</h2>
+        <p id="data-uuid-3ebb685ab20747c595583c4fa0522978" data-uuid="3ebb685ab20747c595583c4fa0522978">Pleiotropy occurs when a single mutant gene affects two or more distinct and seemingly unrelated traits. For example, persons with Marfan syndrome have disproportionately long arms, legs, hands, and feet; a weakened aorta; poor eyesight; and other characteristics (<a href="ch21_reader_4.xhtml#data-uuid-6e1f34a4af864ece86d0c0e97a833834" class="link-inline">Fig. 21.16</a>). All these characteristics are due to the production of abnormal connective tissue.</p>
+        <figure id="data-uuid-6e1f34a4af864ece86d0c0e97a833834" data-uuid="6e1f34a4af864ece86d0c0e97a833834">
+            <img src="../../img/chapter21/ch21_figure_text_16.png" id="data-uuid-0d747c6867d24936bdb667e810f564f7" data-uuid="0d747c6867d24936bdb667e810f564f7" class="text-image ch21_figure_text_16" alt="" />
+            <figcaption>
+                <span class="figure-number">
+                    <span class="figure-designation">Figure</span>
+                    <span class="figure-enumeration">21.16</span>
+                </span>
+                <span class="caption-title">Marfan syndrome.</span>
+                <span class="caption-body">Marfan syndrome illustrates the multiple effects a single gene can have. Marfan syndrome is due to any number of connective tissue defects.</span>
+            </figcaption>
+        </figure>
+        <p id="data-uuid-bff81fbd794944ff8e1e428a6334091d" data-uuid="bff81fbd794944ff8e1e428a6334091d">Marfan syndrome has been linked to a mutation in a gene (<i>FBN1</i>) on chromosome 15 that ordinarily specifies a functional protein called fibrillin. Fibrillin is essential for the formation of elastic fibers in connective tissue. Without the structural support of normal connective tissue, the aorta can burst, particularly if the person is engaged in a strenuous sport, such as volleyball or basketball. Flo Hyman may have been the best American woman volleyball player ever, but she fell to the floor and died at the age of only 31, because her aorta gave way during a game.</p>
+        <h2 id="data-uuid-e9041dcb428a4a72b0a92cf7ec6c4119" data-uuid="e9041dcb428a4a72b0a92cf7ec6c4119">Incomplete Dominance and Codominance</h2>
+        <p id="data-uuid-02d2eec38a894567a99a5126d8c5adc4" data-uuid="02d2eec38a894567a99a5126d8c5adc4"><a href="../glossary.xhtml#key-incomplete-dominance"><dfn title="incomplete dominance">Incomplete dominance</dfn></a> occurs when the heterozygote is intermediate between the two homozygotes. For example, when a curly-haired individual has children with a straight-haired individual, their children have wavy hair. When two wavy-haired persons have children, the expected phenotypic ratio among the offspring is 1:2:1—one curly-haired child to two with wavy hair to one with straight hair. We can explain incomplete dominance by assuming that only one allele codes for a product and the single dose of the product gives the intermediate result.</p>
+        <p id="data-uuid-9edde86f014343b0888ba36588a25c23" data-uuid="9edde86f014343b0888ba36588a25c23"><a href="../glossary.xhtml#key-codominance"><dfn title="codominance">Codominance</dfn></a> occurs when alleles are equally expressed in a heterozygote. A familiar example is the human blood type AB, in which the red blood cells have the characteristics of both type A and type B blood. We can explain codominance by assuming that both genes code for a product, and we observe the results of both products being present. Blood type inheritance is said to be an example of multiple alleles, described in the next section.</p>
+        <h3 id="data-uuid-244114855b324695b0723a99ecb162ea" data-uuid="244114855b324695b0723a99ecb162ea">Incompletely Dominant Disorders</h3>
+        <p id="data-uuid-2cc632bc8b25463f92ce7764e14e484d" data-uuid="2cc632bc8b25463f92ce7764e14e484d">The prognosis in <a href="../glossary.xhtml#key-familial-hypercholesterolemia"><dfn title="familial hypercholesterolemia">familial hypercholesterolemia</dfn></a> parallels the number of LDL-cholesterol receptor proteins in the plasma membrane. A person with two mutated alleles lacks LDL-cholesterol receptors. A person with only one mutated allele has half the normal number of receptors, and a person with two normal alleles has the usual number of receptors. People with the full number of receptors do not have familial hypercholesterolemia. When receptors are completely absent, excessive cholesterol is deposited in various places in the body, including under the skin (<a href="ch21_reader_4.xhtml#data-uuid-ec6d863c46db41c592a8a4c2d021178b" class="link-inline">Fig. 21.17</a>).</p>
+        <figure id="data-uuid-ec6d863c46db41c592a8a4c2d021178b" data-uuid="ec6d863c46db41c592a8a4c2d021178b">
+            <img src="../../img/chapter21/ch21_figure_text_17.png" id="data-uuid-e0213aebb9d44b9f853abf7e56cb62c4" data-uuid="e0213aebb9d44b9f853abf7e56cb62c4" class="text-image ch21_figure_text_17" alt="" />
+            <figcaption>
+                <span class="figure-number">
+                    <span class="figure-designation">Figure</span>
+                    <span class="figure-enumeration">21.17</span>
+                </span>
+                <span class="caption-title">The inheritance of familial hypercholesterolemia.</span>
+                <span class="caption-body">Familial hypercholesterolemia is incompletely dominant. Persons with one mutated allele have an abnormally high level of cholesterol in the blood, and those with two mutated alleles have a higher level still.</span>
+            </figcaption>
+        </figure>
+        <p id="data-uuid-87d36d5969a94ecb9c34445344d98835" data-uuid="87d36d5969a94ecb9c34445344d98835">The presence of excessive cholesterol in the blood causes cardiovascular disease. Therefore, those with no receptors die of cardiovascular disease as children. Individuals with half the number of receptors may die when young or after they have reached middle age.</p>
+        <h2 id="data-uuid-7f076af2c4ab4a65ad3dc4b2ca65c88a" data-uuid="7f076af2c4ab4a65ad3dc4b2ca65c88a">Multiple-Allele Inheritance</h2>
+        <p id="data-uuid-980b109021704d348f90f1ee126cdba2" data-uuid="980b109021704d348f90f1ee126cdba2">When a trait is controlled by <a href="../glossary.xhtml#key-multiple-allele"><dfn title="multiple allele">multiple alleles</dfn></a><b>,</b> the gene exists in several allelic forms. However, each person can have only two of the possible alleles.</p>
+        <h3 id="data-uuid-8e79274dfb7e43f6988f597706226132" data-uuid="8e79274dfb7e43f6988f597706226132">ABO Blood Types</h3>
+        <p id="data-uuid-0f6a574fbb594849aac58635cf3f2684" data-uuid="0f6a574fbb594849aac58635cf3f2684">Three alleles for the same gene control the inheritance of ABO blood types. These alleles determine the presence or absence of antigens on red blood cells (see <a href="../chapter06/ch06_reader_5.xhtml#data-uuid-a25157658a16471eb1d593ac6d07fbe1" class="link-inline">section 6.5</a>):</p>
+        
+        <p id="data-uuid-7e1f2c5633d842158b8515009230fb30" data-uuid="7e1f2c5633d842158b8515009230fb30" class="no-indent">Each person has only two of the three possible alleles, and both <i>I</i><i><sup>A</sup></i> and <i>I<i><sup>B</sup></i></i> are dominant over <i>i.</i> Therefore, there are two possible genotypes for type A blood and two possible genotypes for type B blood. On the other hand, <i>I</i><i><sup>A</sup></i> and <i>I<i><sup>B</sup></i></i> are fully expressed in the presence of the other. Therefore, if a person inherits one of each of these alleles, that person will have type AB blood. Type O blood can result only from the inheritance of two <i>i</i> alleles.</p>
+        <p id="data-uuid-9d28bd40377448c39f5be5acf4f48e64" data-uuid="9d28bd40377448c39f5be5acf4f48e64">The possible genotypes and phenotypes for blood type are as follows:</p>
+        <div id="data-uuid-05c3fabdd16b4d44986c7b54b49ade95" data-uuid="05c3fabdd16b4d44986c7b54b49ade95" class="s9-scrollable">
+            <table id="data-uuid-224e69d95928470b96de58bc7829fa2d" data-uuid="224e69d95928470b96de58bc7829fa2d" class="table-blue">
+                <tbody>
+                    <tr class="tbl-head">
+                        <td id="data-uuid-4fcffa93973d4208b803b494ae83a327" data-uuid="4fcffa93973d4208b803b494ae83a327"><b>Phenotype</b></td>
+                        <td id="data-uuid-ce8a12a410874ab98ada47e85e8d1935" data-uuid="ce8a12a410874ab98ada47e85e8d1935"><b>Possible Genotypes</b></td>
+                    </tr>
+                    <tr>
+                        <td id="data-uuid-cc33435d55c54dab8480fe48f86e9146" data-uuid="cc33435d55c54dab8480fe48f86e9146">A</td>
+                        <td id="data-uuid-7d797be7862043c38d672aa9867d207b" data-uuid="7d797be7862043c38d672aa9867d207b"><i>I<sup>A</sup>I<sup>A</sup>, I<sup>A</sup>i</i></td>
+                    </tr>
+                    <tr>
+                        <td id="data-uuid-653e76cf22b54630831708ed9b11ee9d" data-uuid="653e76cf22b54630831708ed9b11ee9d">B</td>
+                        <td id="data-uuid-ab653bbc47074ca1b83b279d718212e2" data-uuid="ab653bbc47074ca1b83b279d718212e2"><i>I<sup>B</sup>I<sup>B</sup>, I<sup>B</sup>i</i></td>
+                    </tr>
+                    <tr>
+                        <td id="data-uuid-ea2942c074394336ab921b314d5d30c0" data-uuid="ea2942c074394336ab921b314d5d30c0">AB</td>
+                        <td id="data-uuid-2bd7e258f417400abc5304fa7a4899e5" data-uuid="2bd7e258f417400abc5304fa7a4899e5"><i>I<sup>A</sup>I<sup>B</sup></i></td>
+                    </tr>
+                    <tr>
+                        <td id="data-uuid-96757dfce3cc4038be020544b222325f" data-uuid="96757dfce3cc4038be020544b222325f">O</td>
+                        <td id="data-uuid-2d869a7c9cdd4cee8cbf049ce60a2083" data-uuid="2d869a7c9cdd4cee8cbf049ce60a2083"><i>ii</i></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p id="data-uuid-4af4400a7e124d1e8798700b05a2f361" data-uuid="4af4400a7e124d1e8798700b05a2f361">Blood typing was traditionally used in paternity suits. However, a blood test of a supposed father can only suggest that he <i>might</i> be the father, not that he definitely <i>is</i> the father. For example, it is possible, but not definite, that a man with type A blood (genotype <i>I</i><i><sup>A</sup></i><i>i</i>) is the father of a child with type O blood. On the other hand, a blood test sometimes can definitely prove that a man is not the father. For example, a man with type AB blood cannot possibly be the father of a child with type O blood. Therefore, blood tests can be used in legal cases only to try to exclude a man from possible paternity. Modern identification relies more heavily on analysis of patterns in the DNA, called DNA profiling (DNA fingerprinting) (see <a href="../chapter22/ch22_reader_4.xhtml#data-uuid-b260ddca9c784a319ed9139823772115" class="link-inline">section 22.4</a>).</p>
+        <p id="data-uuid-6add306cc03e40deb2f672490753e917" data-uuid="6add306cc03e40deb2f672490753e917"><a href="ch21_reader_4.xhtml#data-uuid-e2bcac606b104a769feb1b2b78041f69" class="link-inline">Figure 21.18</a> shows that matings between certain genotypes can have surprising results in terms of blood type. Parents with type A and type B blood can have offspring with all four possible blood types. Other blood types, such as Rh factor, are discussed in <a href="../chapter06/ch06_reader_5.xhtml#data-uuid-a25157658a16471eb1d593ac6d07fbe1" class="link-inline">section 6.5</a>.</p>
+        <figure id="data-uuid-e2bcac606b104a769feb1b2b78041f69" data-uuid="e2bcac606b104a769feb1b2b78041f69">
+            <img src="../../img/chapter21/ch21_figure_text_18.png" id="data-uuid-c86227dae8ae4296946ba0594f0f6d36" data-uuid="c86227dae8ae4296946ba0594f0f6d36" class="text-image ch21_figure_text_18" alt="" />
+            <figcaption>
+                <span class="figure-number">
+                    <span class="figure-designation">Figure</span>
+                    <span class="figure-enumeration">21.18</span>
+                </span>
+                <span class="caption-title">The inheritance of ABO blood types.</span>
+                <span class="caption-body">Blood type exemplifies multiple-allele inheritance. The <i>I</i> gene has two codominant alleles, designated as <i>I</i><i><sup>A</sup></i> and <i>I<i><sup>B</sup></i></i>, and one recessive allele, designated by <i>i.</i> Therefore, a mating between individuals with type A blood and type B blood can result in any one of the four blood types. Why? The parents are <i>I</i><i><sup>A</sup></i><i>i</i> and <i>I<i><sup>B</sup></i></i><i>i.</i> If both parents were type AB blood, no child would have what blood type? <a href="../remarks.xhtml#key-021-003" class="block-link"><sup>3</sup></a></span></figcaption>
+        </figure>
+        <section id="data-uuid-0dad74043a174b39bf789551fac3d208" data-uuid="0dad74043a174b39bf789551fac3d208" class="sidenote sidenote-check">
+            <h4 id="data-uuid-3ee75a8344bc45e38ac4d4e3e9e6a0b5" data-uuid="3ee75a8344bc45e38ac4d4e3e9e6a0b5">Check Your Progress 21.4</h4>
+            <ol id="data-uuid-3d60d86b40714d5bb75c1d0ab892ef53" data-uuid="3d60d86b40714d5bb75c1d0ab892ef53" class="list-no-style custom-list">
+                <li id="data-uuid-152c19ebff49423696b70132436dfb3c" data-uuid="152c19ebff49423696b70132436dfb3c"><img src="../../assets/img/icon4.png" id="data-uuid-ec84beda95ec4122ba0c07c7ece450df" data-uuid="ec84beda95ec4122ba0c07c7ece450df" class="icon-list inline" />Detail why polygenic inheritance follows a bell-shaped curve.</li>
+                <li id="data-uuid-f51a121abfe344e0a427e247a12dd7ce" data-uuid="f51a121abfe344e0a427e247a12dd7ce"><img src="../../assets/img/icon5.png" id="data-uuid-10972157e3d64923b5903a96daa1b749" data-uuid="10972157e3d64923b5903a96daa1b749" class="icon-list inline" />Describe a multifactorial trait that could have diet and nutrition as environmental influences.</li>
+                <li id="data-uuid-613cdf1203754fb1bd3ab0914b58ccf2" data-uuid="613cdf1203754fb1bd3ab0914b58ccf2"><img src="../../assets/img/icon6.png" id="data-uuid-531207479adc42af92ac5725a71885f6" data-uuid="531207479adc42af92ac5725a71885f6" class="icon-list inline" />Discuss the potential evolutionary advantages of having multiple alleles for a trait.</li>
+            </ol>
+        </section>
+        <section id="data-uuid-c7b28d3117384a2f8bc06b994fc8fcea" data-uuid="c7b28d3117384a2f8bc06b994fc8fcea" class="sidenote sidenote-connecting">
+            <h4 id="data-uuid-31eb7e548e6d428f85291135dac18a29" data-uuid="31eb7e548e6d428f85291135dac18a29">Connecting the Concepts</h4>
+            <p id="data-uuid-59cf6e93fb364295a53691551863b99e" data-uuid="59cf6e93fb364295a53691551863b99e">For more information on the topics presented in this section, refer to the following discussions:</p>
+            <ul id="data-uuid-3e1d108f83d64ea5a83663cb7bc699c8" data-uuid="3e1d108f83d64ea5a83663cb7bc699c8" class="list-no-style list-no-indent">
+                <li id="data-uuid-c5333d14ad12467d9810d43552640fdb" data-uuid="c5333d14ad12467d9810d43552640fdb">
+                    <p id="data-uuid-04ffda11da6d402da41758db945d6e4c" data-uuid="04ffda11da6d402da41758db945d6e4c"><a href="../chapter04/ch04_reader_6.xhtml#data-uuid-fea9d2b647bf42b4829278695dcb9313" class="link-inline">Section 4.6</a> provides more information on the melanocyte cells that control skin color.</p>
+                </li>
+                <li id="data-uuid-473c33a2abd64379a505ce9dd10668fd" data-uuid="473c33a2abd64379a505ce9dd10668fd">
+                    <p id="data-uuid-68215aa3faf0409db54481edc8a2a056" data-uuid="68215aa3faf0409db54481edc8a2a056"><a href="../chapter06/ch06_reader_5.xhtml#data-uuid-a25157658a16471eb1d593ac6d07fbe1" class="link-inline">Section 6.5</a> describes the basis of human blood types.</p>
+                </li>
+                <li id="data-uuid-9d0d6e9b23054537bd53134a6431d22b" data-uuid="9d0d6e9b23054537bd53134a6431d22b">
+                    <p id="data-uuid-3d193c4bab694931867882aaeff83c60" data-uuid="3d193c4bab694931867882aaeff83c60"><a href="../chapter23/ch23_reader_5.xhtml#data-uuid-5a294e48689e410c809a0ad23fe9cc58" class="link-inline">Section 23.5</a> explores the evolution of humans and human races.</p>
+                </li>
+            </ul>
+        </section>
+        <footer id="data-uuid-48885f8c849e4296a7fc444fbb9cbc0e" data-uuid="48885f8c849e4296a7fc444fbb9cbc0e">
+        </footer>
+    </body>
+</html>

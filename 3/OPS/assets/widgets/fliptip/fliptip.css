@@ -1,0 +1,180 @@
+html {
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 10px;
+}
+
+@media screen and (width: 979px) {
+  body {
+    margin: 10px 9px 10px 10px;
+  }
+}
+
+h1 {
+  color: #999;
+  font-family: "Source Sans Pro", Verdana, Helvetica, sans;
+  font-weight: 400;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/** Wrapper that contains all of the cards. */
+#card_container {
+  width: 100%;
+  height: 100%;
+  /** Background appears while cards are flipping. */
+  background: #ccc;
+  margin-top: 1rem;
+  border: 1px solid #dddddd;
+
+  /** Add a sense of depth. */
+  -webkit-box-shadow: inset 0 0 6px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 0 6px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 6px 1px rgba(0, 0, 0, 0.2);
+}
+
+#card_container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/** Each individual card. */
+.card {
+  height: 250px;
+  float: left;
+  position: relative;
+  cursor: default;
+
+  /** Foreshortening of 3D perspective. */
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  -ms-perspective: 600px;
+  -o-perspective: 600px;
+  perspective: 600px;
+}
+
+/** Adjust card sizes based on viewport size. */
+.card {
+  width: 100%;
+  height: 180px;
+}
+
+@media screen and (min-width: 481px) {
+  .card {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .card {
+    width: 33.333%;
+  }
+}
+
+.card .front {
+  z-index: 9;
+}
+
+.card .back {
+  z-index: 8;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+/** Card sizing and transformations */
+.card .front, 
+.card .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #eeeeee;
+  background: #fff;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  height: 100%;
+  display: table;
+}
+
+/** Force images to reize and fit inside of cards. */
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card .dt {
+  font: 500 2.5rem "Source Sans Pro", Verdana, Helvetica, sans;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  text-align: center;
+}
+
+.card .dd {
+  font: 400 2rem "Meta Serif Office Pro", Georgia, serif;
+  text-align: left;
+  color: #555;
+}
+
+.card .dt, 
+.card .dd {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding: 2rem;
+  height: 100%;
+  width: 500px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .card .dt, .card .dd {
+    height: 180px;
+  }
+}
+
+.card.flip .front {
+  border-color: #333;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.card.flip .back {
+  z-index: 1000;
+  border-left-color: #ccc;
+  border-right-color: #ccc;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}

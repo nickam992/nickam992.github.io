@@ -1,0 +1,12 @@
+/* Webfont: SRASerif11-BoldItalic2 */@font-face {
+    font-family: 'SRASerifUnicode1.1';
+    src: url('SRASerif11-BoldItalic2.eot'); /* IE9 Compat Modes */
+    src: url('SRASerif11-BoldItalic2.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('SRASerif11-BoldItalic2.woff') format('woff'), /* Modern Browsers */
+         url('SRASerif11-BoldItalic2.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('SRASerif11-BoldItalic2.svg#SRASerif11-BoldItalic2') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+

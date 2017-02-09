@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Slideline Widget</title>
+        <!-- Basic widget styles -->
+        <link rel="stylesheet" href="../shared/inklingwidget.css">
+        <!-- Unique Widget CSS. -->
+        <link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.css" /> 
+        <link rel="stylesheet" href="css/main.css" /> 
+
+
+        <!-- Required javascript libraries -->
+        <script src="../shared/jquery-2.1.1.min.js"></script>
+        <script src="js/fastclick.js"></script>
+        <!-- jQueryUI libraries -->
+        <script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+        <!-- Touch Event Support for jQueryUI - jQuery Touch Punch (https://github.com/furf) -->
+        <script src="js/jquery.ui.touch-punch.min.js"></script>
+        <!-- Handlebars library (http://handlebarsjs.com/) -->
+        <script src="js/handlebars.js"></script>
+        <!-- Basic widget javascript -->
+        <script src="../shared/inklingwidget.js"></script>  
+        <!-- Unique Widget JS. -->
+        <!-- <script src="js/poptip.js"></script> -->
+        <script src="js/main.js"></script>
+
+
+        <!-- HANDLEBARS Template -->
+        <script id="image-temp" type="text/x-handlebars-template">
+            <div class="image" id="image{{index}}">
+                <img src="{{image}}">
+            </div>
+        </script>
+        <script id="label-temp" type="text/x-handlebars-template">
+            <span class="label" id="label{{index}}">{{label}}</span>
+        </script>
+        <script id="caption-temp" type="text/x-handlebars-template">
+            <div class="caption" id="caption{{index}}">
+                <p>{{{caption}}}</p>
+            </div>
+        </script>
+    </head>     
+    <body>
+        <div id="widget_container">
+            <div id="slide_images">
+                <!-- <img src="img/image1.png"> -->
+            </div>
+            <div id="slide_info">
+                
+                <div id="slide_nav">
+                    <div id="slider"></div>
+                </div>
+                <div id="slide_labels">  
+                    <!-- <span class="slide_label">f/22</span> -->
+                </div>
+                <div id="slide_captions">
+                    <!-- <div class="caption">
+                        <p>{{{slide.caption}}}</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

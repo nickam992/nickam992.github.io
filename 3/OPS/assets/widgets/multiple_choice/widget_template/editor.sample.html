@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Widget Editor Template</title>
+	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+	<script type="text/javascript" src="js/prism.js"></script>
+	<link rel="stylesheet" href="css/editor.css">
+	<link rel="stylesheet" href="css/prism.css">
+</head>
+<body class="editor panel--active">
+	<div class="panel">
+		<ul class="panel-menu">
+			<li><a class="panel-tab" href="#tabs-1">About</a></li>
+			<li><a class="panel-tab" href="#tabs-2">Settings</a></li>
+			<li><a class="panel-tab" href="#tabs-3">Samples</a></li>
+			<span class="stretch"></span>
+			<li class="menu-underline"></li>
+		</ul>
+		<div class="panel-content">
+			<div id="tabs-1">
+				<div class="group">
+					<h2>Widget Editor UI Reference</h2>
+					<p>This reference provides working examples of the default Inkling editor UI patterns.</p>
+					<p><b>Note:</b> These patterns are cosmetic only. You will still need to provide your own editor logic for now. Please refer to the Widget Documentation for more dactiveTabetails on the Editor API.</p>
+				</div>
+			</div>
+			<div id="tabs-2">
+				<p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+			</div>
+			<div id="tabs-3">
+			tab 3
+			</div>
+		</div>
+	</div>
+	<div class="workspace">
+		<div class="content">
+			<div class="group">
+				<h4 class="group-title">Text Input</h4>
+				<input type="text" placeholder="Placeholder Text">
+			</div>
+			<div class="group">
+				<h4 class="group-title">Text Area</h4>
+				<textarea placeholder="Placeholder Text"></textarea>
+			</div>
+			<div class="grid">
+				<div class="group one-half">
+					<h4 class="group-title">Text Input</h4>
+					<input type="text" placeholder="Placeholder Text">
+				</div>
+				<div class="group one-half">
+					<h4 class="group-title">Text Input</h4>
+					<input type="text" placeholder="Placeholder Text">
+				</div>
+			</div>
+			<div class="group">
+				<h4 class="group-title">Text Input Icon</h4>
+				<input class="btn-show" type="text" placeholder="Placeholder Text">
+				<input class="btn-hide" type="text" placeholder="Placeholder Text">
+			</div>
+			<div class="grid">
+				<div class="group one-half">
+					<h4 class="group-title">Native Select Menu</h4>
+					<select>
+					  <option selected value="avocados">Avocados</option>
+					  <option value="brussel sprouts">Brussel Sprouts</option>
+					  <option value="leeks">Leeks</option>
+					  <option value="snow peas">Snow Peas</option>
+					</select>
+					<p>Uses the native select menu styled with CSS</p>
+				</div>
+				<div class="group one-half">
+					<h4 class="group-title">Fancypants Select Menu</h4>
+					<select class="select-menu">
+					  <option value="avocados">Avocados</option>
+					  <option selected value="brussel sprouts">Brussel Sprouts</option>
+					  <option value="leeks">Leeks</option>
+					  <option value="snow peas">Snow Peas</option>
+					</select>
+					<p>Uses JS and CSS to build faux controls for a real select element</p>
+				</div>
+			</div>
+			<div class="group">
+				<h4 class="group-title">Button Menu</h4>
+				<menu class="button-menu vert-right">
+					<button class="button btn-add-image" name="Add Image"></button>
+					<hr>
+					<button class="button btn-replace" name="Replace"></button>
+					<button class="button btn-delete" name="Delete"></button>
+				</menu>
+				<p>The button menu to the right can be used to hold buttons that should be associated with a specific group. Add a <code class="language-markup">name</code> attribute to show a tooltip.</p>
+				<pre><code class="language-markup">&lt;button class=&quot;button btn-add-image&quot; name=&quot;Button Tooltip&quot;&gt;&lt;/button&gt;</code></pre>
+				<p>
+				<button class="button btn-add-image" name="Button Tooltip"></button></p>
+				<p>Button menus can also be arranged horizontally.</p>
+				<div class="button-menu horz-center">
+					<button class="button btn-add-image" name="Add Image"></button>
+					<hr>
+					<button class="button btn-replace" name="Replace"></button>
+					<button class="button btn-delete" name="Delete"></button>
+				</div>
+			</div>
+			<div class="group">
+				<h4 class="group-title">Image</h4>
+				<menu class="button-menu vert-right">
+					<button class="button btn-replace"></button>
+					<button class="button btn-delete"></button>
+				</menu>
+				<div class="image">
+					<img src="css/images/editor/image-placeholder.svg" alt="">
+				</div>
+			</div>
+			<div class="group">
+				<h4 class="group-title">Menu List</h4>
+				<ul class="menu-list">
+					<li class="btn-sort">First item</li>
+					<li class="btn-sort">Second item</li>
+					<li class="btn-sort">Third item</li>
+				</ul>
+			</div>
+			<div class="group">
+				<h4 class="group-title">Sortable</h4>
+				<ul class="menu-list sortable">
+					<li class="btn-sort">First item</li>
+					<li class="btn-sort">Second item</li>
+					<li class="btn-sort">Third item</li>
+				</ul>
+			</div>
+			<div class="group">
+				<h4 class="group-title">Selectable</h4>
+				<ul class="menu-list selectable">
+					<li class="btn-select">First item</li>
+					<li class="btn-select">Second item</li>
+					<li class="btn-select">Third item</li>
+				</ul>
+			</div>
+			<div class="group">
+				<h4 class="group-title">Editable</h4>
+				<ul class="menu-list editable">
+					<li>
+						<button class="btn-remove"></button>
+						<button class="btn-edit"></button>
+						<span class="inner-text">First item</span>
+					</li>
+					<li>
+						<button class="btn-remove"></button>
+						<button class="btn-edit"></button>
+						<span class="inner-text">Second item</span>
+					</li>
+					<li>
+						<button class="btn-remove"></button>
+						<button class="btn-edit"></button>
+						<span class="inner-text">Third item</span>
+					</li>
+				</ul>
+			</div>
+			<div class="group">
+				<h4 class="group-title">Editable + Selectable</h4>
+				<ul class="menu-list editable selectable">
+					<li>
+						<button class="btn-remove"></button>
+						<button class="btn-edit"></button>
+						<span class="inner-text">First item</span>
+					</li>
+					<li>
+						<button class="btn-remove"></button>
+						<button class="btn-edit"></button>
+						<span class="inner-text">Second item</span>
+					</li>
+					<li>
+						<button class="btn-remove"></button>
+						<button class="btn-edit"></button>
+						<span class="inner-text">Third item</span>
+					</li>
+				</ul>
+			</div>
+
+			<h1>Getting Started</h1>
+			<div class="group">
+				<h2 class="group-title">Grouping</h2>
+				<p>Grouping patterns make them easier to maintain and transport. A group usually contains a <code>group-title</code> and at least one editor pattern. Even this section is a group.</p>
+				<pre><code class="language-markup">&lt;div class=&quot;group&quot;&gt;
+	&lt;h2 class=&quot;group-title&quot;&gt;Group Title&lt;/h2&gt;
+	&lt;input type=&quot;text&quot; placeholder=&quot;Placeholder Text&quot;&gt;
+&lt;/div&gt;</code></pre>
+			</div>
+			<div class="group">
+				<menu class="button-menu vert-right">
+					<button name="Replace" class="button btn-replace"></button>
+					<button name="Delete" class="button btn-delete"></button>
+				</menu>
+				<p>Groups can also be useful for associating buttons with a particular module. The buttons to the right are nested within the group, making it easier to move them around together.</p>
+			</div>
+			<div class="group">
+				<h2 class="group-title">Editor Workspace</h2>
+				<p>The main body of the editor consists of a single column workspace. Patterns are added to this workspace to build an editor interface.</p>
+				<p>The code below is the minimum HTML to setup the workspace.</p>
+				<pre><code class="language-markup">&lt;body class=&quot;editor&quot;&gt;
+	&lt;div class=&quot;workspace&quot;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;!-- Add your content here --&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/body&gt;</code></pre>
+			</div>
+			<div class="group">
+				<h2 class="group-title">Control Panel</h2>
+				<p>Some widgets call for an aditional side panel to help users navigate through aditional content or change settings.</p>
+				<pre><code class="language-markup">&lt;body class=&quot;editor panel--active&quot;&gt;
+	&lt;div class=&quot;panel&quot;&gt;
+		&lt;!-- Add your panel content here --&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;workspace&quot;&gt;
+		&lt;div class=&quot;content&quot;&gt;
+			&lt;!-- Add your content here --&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/body&gt;</code></pre>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/editor.js"></script>
+</body>
+</html>

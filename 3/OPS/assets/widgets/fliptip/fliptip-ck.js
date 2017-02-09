@@ -1,0 +1,4 @@
+/**
+ * FlipTips 1.0
+ * All code not previously covered by 3rd party licenses (MIT, etc) is copyright Inkling, 2013.
+ */function resize(){s9.view.size({height:document.documentElement.offsetHeight})}var collection={options:{cardHeight:Number,cardWidth:Number,shuffle:"boolean",edit:"boolean",flipOrient:"x|y"}},init=function(e){if(!e){e={};var t=6;for(var n=1;n<=t;n++)s9.initialParams["card"+n+"-front"]&&(e[n]={front:s9.initialParams["card"+n+"-front"],back:s9.initialParams["card"+n+"-back"]});collection.cards=e}var r=$("#card_template").html(),i=Handlebars.compile(r);$("#card_container").append(i(collection))};Handlebars.registerHelper("transmogrify",function(e){return new Handlebars.SafeString(e)});$(window).resize(resize);$(document).ready(function(){init();resize();window.addEventListener("load",function(){new FastClick(document.body)},!1);$("#card_container").on("click",".card",function(e){$(this).toggleClass("flip")})});

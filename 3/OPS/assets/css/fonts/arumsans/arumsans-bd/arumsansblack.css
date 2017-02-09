@@ -1,0 +1,12 @@
+/* Webfont: ArumSansBlack */@font-face {
+    font-family: 'ArumSansBd';
+    src: url('ArumSansBlack.eot'); /* IE9 Compat Modes */
+    src: url('ArumSansBlack.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('ArumSansBlack.woff') format('woff'), /* Modern Browsers */
+         url('ArumSansBlack.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('ArumSansBlack.svg#ArumSansBlack') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+

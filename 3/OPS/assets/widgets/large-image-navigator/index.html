@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Large Image Navigator</title>
+
+        <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <script src="lib/jquery-1.11.1.js"></script>
+        <script src="lib/jquery-ui.min.js"></script>
+        <script src="lib/underscore-min.js"></script>
+        <script src="lib/backbone-min.js"></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+        <link href="css/mhe.css" rel="stylesheet">
+        <link href="css/viewer.css" rel="stylesheet">
+        <script src="js/app.js"></script>
+        <script src="js/utils.js"></script>
+        <script src="js/persistence.js"></script>
+        <script src="js/parent.js"></script>
+
+        <script src="js/models/widgetmodel.js"></script>
+
+        <script src="js/viewer/views/viewerview.js"></script>
+        <script src="js/viewer/views/largeimageview.js"></script>
+        <script src="js/viewer/views/mapview.js"></script>
+
+        <script>
+            $(function() {
+                Widget.app = new Widget.App({
+                    editor: false,
+                    debug: location.hostname === 'localhost'
+                });
+                Widget.app.initialize();
+            });
+        </script>
+
+        <script type="text/template" id="viewer-template">
+            <div class="title clearfix"><%= title %></div>
+            <div id="large-image"></div>
+            <div class="caption clearfix"><%= caption %></div>
+        </script>
+
+        <script type="text/template" id="large-image-template">
+            <img src="<%= src %>" alt="" class="main"/>
+            <div class="map <%= thumbnailCorner %>"></div>
+        </script>
+
+        <script type="text/template" id="map-template">
+            <div class="thumb">
+                <img src="<%= src %>" alt=""/>
+                <div class="viewport"
+                     style="border-color: #<%= viewportColor %>;"></div>
+            </div>
+            <div class="controls">
+                <button class="js-zoom-in">
+                    <span class="mhe-icon mhe-icon-plus"></span>
+                </button>
+                <button class="js-zoom-out">
+                    <span class="mhe-icon mhe-icon-minus"></span>
+                </button>
+            </div>
+        </script>
+
+    </head>
+
+    <body></body>
+
+</html>

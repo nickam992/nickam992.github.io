@@ -1,0 +1,12 @@
+/* Webfont: ProximaNova-LightIt */@font-face {
+    font-family: 'ProximaNovaLight';
+    src: url('ProximaNova-LightIt.eot'); /* IE9 Compat Modes */
+    src: url('ProximaNova-LightIt.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('ProximaNova-LightIt.woff') format('woff'), /* Modern Browsers */
+         url('ProximaNova-LightIt.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('ProximaNova-LightIt.svg#ProximaNova-LightIt') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

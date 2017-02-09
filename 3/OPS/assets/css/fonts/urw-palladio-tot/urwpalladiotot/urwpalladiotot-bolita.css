@@ -1,0 +1,12 @@
+/* Webfont: URWPalladioTOT-BolIta */@font-face {
+    font-family: 'URWPalladioTOT';
+    src: url('URWPalladioTOT-BolIta.eot'); /* IE9 Compat Modes */
+    src: url('URWPalladioTOT-BolIta.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('URWPalladioTOT-BolIta.woff') format('woff'), /* Modern Browsers */
+         url('URWPalladioTOT-BolIta.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('URWPalladioTOT-BolIta.svg#URWPalladioTOT-BolIta') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Slideshow Widget</title>
+
+        <!--
+        LIBRARY LICENSES
+        jQuery 1.8.3  - MIT 2013 The jQuery Foundation and other contributors (https://github.com/jquery/jquery)
+        Handlebars    - MIT 2011 Yehuda Katz (https://github.com/wycats/handlebars.js/)
+        -->
+
+        <!-- Basic widget styles -->
+        <link rel="stylesheet" href="../shared/inklingwidget.css">
+        <link rel="stylesheet" href="css/idangerous.swiper.css">
+        <!-- Slideshow specific styles -->
+        <link rel="stylesheet" href="css/main.css" /> 
+         
+        <!-- Basic widget javascript -->
+        <script src="../shared/inklingwidget.js"></script>  
+        <!-- Required javascript libraries. -->
+        <script src="../shared/jquery-2.1.1.min.js"></script>
+        <script defer src="js/idangerous.swiper.js"></script>
+        <script src="js/handlebars.js"></script>
+        <script type='application/javascript' src='js/fastclick.js'></script>
+        
+        <!-- Slideshow specific javascript -->
+        <script src="js/main.js"></script>
+
+        <script class="swiper-slide" type="text/x-handlebars-template">
+            {{#each slideData}}
+                <div class="swiper-slide">
+                    <div class="image-container">
+                        <img class="image image{{index}}" src="{{image}}" />
+                    </div>
+                </div>
+            {{else}}
+               <div class="swiper-slide">
+                    <div class="image-container">
+                        <img class="image placeholder" src="img/placeholder-image.svg" />
+                    </div>
+                </div>
+            {{/each}}
+        </script>
+
+    </head>     
+    <body>
+        <div class="swiper-container">
+            <div class="slideshow_nav">
+                <div class="prev_nav button"></div>
+                <div class="next_nav button"></div>
+            </div>
+            
+            <div class="swiper-wrapper"></div>
+
+        </div>
+
+        <div class="my-pagination"></div>
+        <p class="slide-title title"></p>
+        <p class="slide-caption caption"></p>
+        <p class="slide-source source"></p>
+       
+        
+    </body>
+
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Editor</title>
+    <script type="text/javascript" src="widget_template/js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="widget_template/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="widget_template/js/prism.js"></script>
+    <script src="../shared/handlebars.js"></script>
+
+    <!-- Basic widget javascript -->
+    <script src="../shared/inklingwidget.js"></script>
+    <!-- Basic widget styles -->
+    <link rel="stylesheet" href="../shared/inklingwidget.css">
+
+    <link rel="stylesheet" href="widget_template/css/editor.css">
+    <link rel="stylesheet" href="widget_template/css/prism.css">
+
+
+
+    <!-- Multiple Choice Assessment Widget CSS. -->
+    <link rel="stylesheet" href="css/editor.css" />
+
+
+
+    <!-- Handlebars setup -->
+    <script class="<!-- answer -->" type="text/x-handlebars-template">
+        {{#each answerData}}
+          
+        <div class="answerBlock">
+            <li class="btnEdit answer{{number}}"><span class="enumeration">{{enumeration}}</span>
+            <label class="switch"><input type="checkbox" class="check" /><span class="switch-label"></span></label>
+                <textarea class="answerInput" value="{{answer}}" placeholder = "Add Answer" rows="1"></textarea>
+
+                <div class="promptText"></div>
+                <textarea class="optionalText"placeholder="Add Feedback (Optional)" rows= "1">{{optionalText}}</textarea>
+            </li>
+            <button class="button btn-trash" name="Delete Choice"></button>
+        </div>
+        {{/each}}
+    </script>
+
+
+</head>
+<body class="editor panel--active">
+    <div class="panel">
+        <ul class="panel-menu">
+            <!-- <li><a class="panel-tab" href="#tabs-1">Question</a></li> -->
+            <li><a class="panel-tab" href="#tabs-1">Settings</a>
+            </li>
+            <span class="stretch"></span>
+            <li class="menu-underline"></li>
+        </ul>
+        <div class="panel-content">
+            <div id="tabs-1">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    <span class="checkbox-label">Shuffle Choices</span>
+                </label>
+                <span id="settingsHelper">
+                    Randomly shuffle choices each time the reader takes this assessment.
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="workspace">
+        <div class="content">
+            <div class="group" id="questionGroup">
+                <menu class="button-menu vert-right">
+                    <div class="button btn-add-image imageEditor" name="Add Image">
+                        <input id="imagePicker" type="file">
+                    </div>
+
+                </menu>
+                <div class="btnEdit" id="question">
+                    <textarea type="text" class="answerInput" placeholder="Add Question" font-weight: "800"></textarea>
+                    <textarea class="optionalText" placeholder="Add Hint (optional)" rows="1"></textarea>
+                    <div class="promptText"></div>
+                </div>
+            </div>
+            <div class="group" id="imageGroup" style="display: none">
+                <menu class="button-menu vert-right" id="imageButtons">
+                    <div class="button btn-replace" name="Swap Image">
+                        <input id="swapButton" type="file">
+                    </div>
+                     <div class="button btn-delete" name="Delete Image">
+                    </div>
+
+                </menu>
+                <div class="image"><img id="imageContainer" style="display:none"></div>
+            </div>
+            <div class="group">
+                <ul class="answer_set sortable"></ul>
+                <div id="addButton">Add Choice</div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="overlay-mask"></div>
+
+        <div class="dialog-box confirmation">
+            <div class="dialogText">
+                <h4>Are you sure?</h4>
+            </div>
+            <div class="dialogButtons">
+                <div class="button-div confirmDelete clickable"><div class="button-text">Okay</div></div><br>
+                <!-- <span class="cancelDelete clickable">Cancel</span> -->
+            </div>
+           <!--  <div class="show-again">
+                <input type="checkbox" id="showDelConf" class="custom-checkbox">
+                <div class="fake-checkbox"></div>
+                Don't show this message again.
+            </div> -->
+        </div>
+    <script>
+    console.log('here')
+    var global = {};
+    if (document.location.hostname == "localhost" ||
+        document.location.hostname == "svn.inkling.com") {
+        //allows for reuse of answers
+        var answer1 = {
+            "optionalText": "The nucleus should be identifiable by the nuclear envelope, the double-membrane that surrounds it.",
+            "answer": "water"
+        };
+        var answer2 = {
+            "optionalText": "Less than 1% of the atmosphere is CO2, but that is enough to support photosynthesis.",
+            "answer": "carbon dioxide"
+        };
+        var answer3 = {
+            "optionalText": "",
+            "answer": "cholorphyll"
+        };
+        var answer4 = {
+            "optionalText": "The nucleus should be identifiable by the nuclear envelope, the double-membrane that surrounds it.",
+            "answer": "the Sun"
+        };
+        var answer5 = {
+            "optionalText": "The nucleus should be identifiable by the nuclear envelope, the double-membrane that surrounds it.",
+            "answer": "soil"
+        };
+        s9.initialParams = {
+            "title": "Question 1",
+            "question": "In photosynthesis, plants use carbon from _______ to make sugar and other organic molecules.",
+            "answers": JSON.stringify([answer1, answer2, answer3, answer4, answer5]),
+            "hint": "see page 4",
+            "correct": "answer2",
+            "shuffle": "true"
+            // "imgSrc": "test.png"
+        };
+    }
+    </script>
+    <script type="text/javascript" src="widget_template/js/editor.js"></script>
+    <script src="js/editor.js"></script>
+
+</body>
+
+</html>

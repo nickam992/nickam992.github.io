@@ -1,0 +1,739 @@
+/* --- Variables --- */
+/* line 57, ../sass/sl-editor.scss */
+body {
+  background-color: #f2f2f6;
+  color: #444; }
+
+/* line 62, ../sass/sl-editor.scss */
+.details {
+  color: #AAA;
+  font-size: 14px; }
+
+/* line 67, ../sass/sl-editor.scss */
+*:focus {
+  outline: 0; }
+
+/* line 75, ../sass/sl-editor.scss */
+.upload {
+  position: absolute;
+  padding: 44px;
+  text-align: center;
+  width: 100%;
+  height: 100%; }
+
+/* line 83, ../sass/sl-editor.scss */
+.drag-area {
+  border: 2px dashed #dadae1;
+  border-radius: 6pt;
+  height: 100%;
+  overflow: hidden; }
+
+/* line 90, ../sass/sl-editor.scss */
+.drag-area:hover {
+  border: 2px dashed #007d99;
+  cursor: pointer; }
+
+/* line 95, ../sass/sl-editor.scss */
+.hovering #upload-image-icon {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-animation-name: breathe-in;
+  -moz-animation-name: breathe-in;
+  -ms-animation-name: breathe-in;
+  -o-animation-name: breathe-in;
+  animation-name: breathe-in;
+  -webkit-animation-duration: 0.2s;
+  -moz-animation-duration: 0.2s;
+  -ms-animation-duration: 0.2s;
+  -o-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-iteration-count: once;
+  -moz-animation-iteration-count: once;
+  -ms-animation-iteration-count: once;
+  -o-animation-iteration-count: once;
+  animation-iteration-count: once;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  background-image: url("../img/ic-ready-to-drop-active.svg") !important; }
+
+/* line 104, ../sass/sl-editor.scss */
+.upload-instructions {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 24px;
+  pointer-events: none; }
+
+/* line 114, ../sass/sl-editor.scss */
+.upload-instructions .details {
+  margin-top: 6px;
+  font-style: italic;
+  color: #a9aaae;
+  font-size: 14px;
+  display: none; }
+
+/* line 122, ../sass/sl-editor.scss */
+.ready-text {
+  font-weight: bold;
+  color: #007d99; }
+
+/* line 127, ../sass/sl-editor.scss */
+.select-wrapper {
+  padding-left: 30px; }
+
+/* line 131, ../sass/sl-editor.scss */
+#image-uploader, #image-replacer {
+  display: none; }
+
+/* line 135, ../sass/sl-editor.scss */
+#upload-image-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 100px;
+  margin-bottom: 18px;
+  background-image: url("../img/ic-add-images-normal.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  pointer-events: none; }
+
+/* line 148, ../sass/sl-editor.scss */
+.drag-area:hover #upload-image-icon {
+  background-image: url("../img/ic-add-images-active.svg");
+  margin-bottom: 18px;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+  -webkit-animation-name: breathe-in;
+  -moz-animation-name: breathe-in;
+  -ms-animation-name: breathe-in;
+  -o-animation-name: breathe-in;
+  animation-name: breathe-in;
+  -webkit-animation-duration: 0.2s;
+  -moz-animation-duration: 0.2s;
+  -ms-animation-duration: 0.2s;
+  -o-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-iteration-count: once;
+  -moz-animation-iteration-count: once;
+  -ms-animation-iteration-count: once;
+  -o-animation-iteration-count: once;
+  animation-iteration-count: once;
+  -webkit-animation-timing-function: ease-out;
+  -moz-animation-timing-function: ease-out;
+  -ms-animation-timing-function: ease-out;
+  -o-animation-timing-function: ease-out;
+  animation-timing-function: ease-out; }
+
+@-webkit-keyframes breathe-in {
+  /* line 159, ../sass/sl-editor.scss */
+  from {
+    -webkit-transform: scale(1); }
+
+  /* line 160, ../sass/sl-editor.scss */
+  to {
+    -webkit-transform: scale(1.05); } }
+
+/* line 167, ../sass/sl-editor.scss */
+#preview-area {
+  border-radius: 6pt;
+  padding: 0;
+  overflow: hidden;
+  line-height: 0px; }
+
+/* line 174, ../sass/sl-editor.scss */
+#preview-image {
+  position: relative;
+  background-color: #FFF; }
+
+/* line 36, ../sass/sl-editor.scss */
+::-webkit-input-placeholder {
+  color: #a9aaae;
+  font-style: italic;
+  font-weight: normal; }
+
+/* line 39, ../sass/sl-editor.scss */
+::-moz-input-placeholder {
+  color: #a9aaae;
+  font-style: italic;
+  font-weight: normal; }
+
+/* line 42, ../sass/sl-editor.scss */
+::-ms-input-placeholder {
+  color: #a9aaae;
+  font-style: italic;
+  font-weight: normal; }
+
+/* line 47, ../sass/sl-editor.scss */
+::input-placeholder {
+  color: #a9aaae;
+  font-style: italic;
+  font-weight: normal; }
+
+/* line 185, ../sass/sl-editor.scss */
+textarea.slide-caption, input.slide-label {
+  vertical-align: middle;
+  position: relative;
+  margin: 0px;
+  border: none;
+  border-top: 1px solid #f2f2f6;
+  border-radius: 0;
+  width: 100%;
+  height: 55px;
+  font-size: 14px; }
+
+/* line 197, ../sass/sl-editor.scss */
+textarea.clone-caption {
+  vertical-align: middle;
+  position: relative;
+  margin: 0px;
+  border: none;
+  border-top: 1px solid #f2f2f6;
+  width: 100%;
+  height: 55px;
+  font-size: 14px;
+  pointer-events: none;
+  opacity: 0; }
+
+/* line 210, ../sass/sl-editor.scss */
+input.slide-label {
+  color: #2e313b;
+  font-weight: bold; }
+
+/* line 215, ../sass/sl-editor.scss */
+textarea.slide-caption {
+  color: #53555e;
+  min-height: 55px;
+  max-height: 150px; }
+
+/* line 221, ../sass/sl-editor.scss */
+.image-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0; }
+
+/* line 228, ../sass/sl-editor.scss */
+.image-wrapper img {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+  -moz-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  -o-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  text-align: center;
+  width: 100%;
+  height: auto; }
+
+/* line 241, ../sass/sl-editor.scss */
+#slider {
+  margin-right: 10px; }
+
+/* line 245, ../sass/sl-editor.scss */
+.ui-slider-tick-mark {
+  background: #777;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 50%;
+  border-radius: 10px;
+  top: 4px; }
+  /* line 254, ../sass/sl-editor.scss */
+  .ui-slider-tick-mark:hover {
+    background: #80bce0;
+    transition: background 0.3s; }
+
+/* line 260, ../sass/sl-editor.scss */
+#slide_info {
+  background-color: #FFF;
+  width: inherit;
+  position: relative;
+  padding: 0 4%;
+  margin-top: 10px;
+  height: 90px;
+  padding-top: 15px;
+  border-radius: 6px; }
+  /* line 270, ../sass/sl-editor.scss */
+  #slide_info #slide_nav {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 30px;
+    text-align: center; }
+    /* line 276, ../sass/sl-editor.scss */
+    #slide_info #slide_nav #slider {
+      margin-bottom: 10px; }
+
+/* line 282, ../sass/sl-editor.scss */
+.ui-slider {
+  position: relative;
+  text-align: left;
+  height: 20px !important;
+  background: url("../img/slider_background_editor.svg") top left repeat-x;
+  top: -10px; }
+
+/* line 289, ../sass/sl-editor.scss */
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 1.2em;
+  height: 1.2em;
+  cursor: default; }
+
+/* line 296, ../sass/sl-editor.scss */
+.ui-slider .ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  font-size: .7em;
+  display: block;
+  border: 0;
+  background-position: 0 0; }
+
+/* For IE8 - See #6727 */
+/* line 307, ../sass/sl-editor.scss */
+.ui-slider.ui-state-disabled .ui-slider-handle,
+.ui-slider.ui-state-disabled .ui-slider-range {
+  filter: inherit; }
+
+/* line 311, ../sass/sl-editor.scss */
+.ui-slider-horizontal {
+  height: .2em; }
+
+/* line 314, ../sass/sl-editor.scss */
+.ui-slider-horizontal .ui-slider-handle {
+  top: 4px;
+  /*  margin-left: -.6em;*/
+  /*background: url('../img/slider-handle-normal.svg');*/
+  background-color: #09b0d0;
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  -webkit-transform-origin: center center;
+  border: 1px solid #09b0d0;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition: all 0.5s ease-out, left 0s; }
+
+/* line 327, ../sass/sl-editor.scss */
+.ui-slider-horizontal .ui-slider-handle.ui-state-active {
+  background-color: rgba(9, 176, 208, 0);
+  -webkit-transform: scale(2.5);
+  position: absolute;
+  border-radius: 25px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition: -webkit-transform 0.1s ease-out, left 0s; }
+
+/* line 337, ../sass/sl-editor.scss */
+.ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 100%; }
+
+/* line 341, ../sass/sl-editor.scss */
+.ui-slider-horizontal .ui-slider-range-min {
+  left: 0; }
+
+/* line 344, ../sass/sl-editor.scss */
+.ui-slider-horizontal .ui-slider-range-max {
+  right: 0; }
+
+/* line 348, ../sass/sl-editor.scss */
+.ui-slider-vertical {
+  width: .8em;
+  height: 100px; }
+
+/* line 352, ../sass/sl-editor.scss */
+.ui-slider-vertical .ui-slider-handle {
+  left: -.3em;
+  margin-left: 0;
+  margin-bottom: -.6em; }
+
+/* line 357, ../sass/sl-editor.scss */
+.ui-slider-vertical .ui-slider-range {
+  left: 0;
+  width: 100%; }
+
+/* line 361, ../sass/sl-editor.scss */
+.ui-slider-vertical .ui-slider-range-min {
+  bottom: 0; }
+
+/* line 364, ../sass/sl-editor.scss */
+.ui-slider-vertical .ui-slider-range-max {
+  top: 0; }
+
+/* line 373, ../sass/sl-editor.scss */
+.sortable-placeholder {
+  border-left: 2px solid #39be26;
+  width: 117px;
+  height: 130px;
+  margin-left: -15px; }
+
+/* line 380, ../sass/sl-editor.scss */
+#slides {
+  padding-left: 40px;
+  padding-right: 40px;
+  color: #777;
+  overflow: hidden; }
+
+/* line 387, ../sass/sl-editor.scss */
+#slides li {
+  list-style-type: decimal;
+  list-style: none;
+  margin-bottom: 1em;
+  display: list-item; }
+
+/* line 394, ../sass/sl-editor.scss */
+#slides li::before {
+  margin-left: -1.3em;
+  padding-left: 0;
+  content: attr(data-index);
+  color: #53545E;
+  font-size: 12px; }
+
+/* line 402, ../sass/sl-editor.scss */
+.ui-sortable-helper div .nav-slide {
+  box-shadow: 0px 3px 8px #2e313b;
+  cursor: move !important; }
+
+/* line 407, ../sass/sl-editor.scss */
+.ui-sortable-helper div button {
+  display: none !important; }
+
+/* line 411, ../sass/sl-editor.scss */
+.ui-sortable-helper div .nav-slide:not(.active) {
+  border: none !important; }
+
+@-webkit-keyframes fadein {
+  /* line 416, ../sass/sl-editor.scss */
+  from {
+    opacity: 0; }
+
+  /* line 417, ../sass/sl-editor.scss */
+  to {
+    opacity: 1; } }
+
+/* line 420, ../sass/sl-editor.scss */
+.btn-trash {
+  margin-top: -15px;
+  float: left;
+  display: none;
+  background-size: 18px 18px; }
+
+/* line 427, ../sass/sl-editor.scss */
+.slide-item:hover .btn-trash {
+  display: inline-block;
+  -webkit-animation: fadein 0.4s;
+  -moz-animation: fadein 0.4s;
+  -ms-animation: fadein 0.4s;
+  -o-animation: fadein 0.4s;
+  animation: fadein 0.4s; }
+
+/* line 432, ../sass/sl-editor.scss */
+.btn-trash:hover {
+  background-size: 20px 20px; }
+
+/* line 436, ../sass/sl-editor.scss */
+#slides .nav-slide {
+  position: relative;
+  float: left;
+  margin-top: -16px;
+  background-color: #FFF;
+  width: 117px;
+  height: 130px;
+  border: 2px solid #EEE;
+  border-radius: 6px;
+  background-color: #FFF;
+  font-size: 1px;
+  overflow: hidden;
+  text-align: center; }
+
+/* line 451, ../sass/sl-editor.scss */
+#slides .nav-slide:hover {
+  cursor: pointer; }
+
+/* line 455, ../sass/sl-editor.scss */
+#slides .nav-slide.active {
+  border: 2px solid #007d99; }
+
+/* line 459, ../sass/sl-editor.scss */
+.landscape {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+  -moz-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  -o-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+  text-align: center;
+  width: 100%;
+  height: auto; }
+
+/* line 468, ../sass/sl-editor.scss */
+.portrait {
+  width: auto;
+  height: 100%; }
+
+/* line 473, ../sass/sl-editor.scss */
+.add-image span button {
+  vertical-align: middle;
+  margin-right: 10px; }
+
+/* line 478, ../sass/sl-editor.scss */
+.add-image span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer; }
+
+/* line 485, ../sass/sl-editor.scss */
+.add-image:hover {
+  color: #007d99; }
+
+/* line 492, ../sass/sl-editor.scss */
+.add-image:hover span button {
+  background-image: url(images/editor/btn-add--hover.svg);
+  background-size: 34px 34px; }
+
+/* line 497, ../sass/sl-editor.scss */
+#slides ul.details {
+  margin-left: 10px; }
+
+/* line 501, ../sass/sl-editor.scss */
+#slides ul.details li:before {
+  margin-left: -9px; }
+
+@-webkit-keyframes fadeInOverlay {
+  /* line 512, ../sass/sl-editor.scss */
+  0% {
+    opacity: 0; }
+
+  /* line 513, ../sass/sl-editor.scss */
+  100% {
+    opacity: 0.95; } }
+
+/* line 516, ../sass/sl-editor.scss */
+.overlay-mask {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #353545;
+  opacity: 0;
+  z-index: 10; }
+
+/* line 528, ../sass/sl-editor.scss */
+.overlay-mask.overlay-mask-visible {
+  display: block;
+  -webkit-animation: fadeInOverlay 200ms 0 1 normal ease-in-out;
+  -moz-animation: fadeInOverlay 200ms 0 1 normal ease-in-out;
+  -ms-animation: fadeInOverlay 200ms 0 1 normal ease-in-out;
+  -o-animation: fadeInOverlay 200ms 0 1 normal ease-in-out;
+  animation: fadeInOverlay 200ms 0 1 normal ease-in-out;
+  opacity: 0.95; }
+
+/* line 534, ../sass/sl-editor.scss */
+.dialog-box {
+  display: none;
+  background: #f1f1f1;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  color: #6a6a75;
+  position: absolute;
+  padding: 36px 36px 30px 36px;
+  left: 50%;
+  top: 30%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 15;
+  min-width: 300px; }
+
+/* line 550, ../sass/sl-editor.scss */
+.dialog-box h4 {
+  font-weight: normal;
+  font-size: 24px;
+  color: #353545;
+  margin-bottom: 8px; }
+
+/* line 557, ../sass/sl-editor.scss */
+.dialog-box .button-div {
+  display: inline-block;
+  color: #FFF;
+  background-color: #198abe;
+  padding: 12px;
+  min-width: 120px;
+  border-radius: 6px;
+  vertical-align: middle;
+  margin-bottom: 16px; }
+
+/* line 568, ../sass/sl-editor.scss */
+.dialog-box .button-text {
+  line-height: 16px; }
+
+/* line 572, ../sass/sl-editor.scss */
+.dialog-box .clickable {
+  cursor: pointer; }
+
+/* line 576, ../sass/sl-editor.scss */
+.dialog-box .show-again {
+  position: absolute;
+  top: 100%;
+  color: #FFF;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+  -moz-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  -o-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+  margin-top: 18px;
+  width: 100%; }
+
+/* line 586, ../sass/sl-editor.scss */
+.dialog-box .show-again .dialog-checkbox {
+  vertical-align: middle;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-image: url(images/editor/ic-checkbox-white.svg);
+  background-repeat: no-repeat;
+  margin-right: 10px; }
+
+/* line 604, ../sass/sl-editor.scss */
+.hanging-indent {
+  text-indent: -30px;
+  padding-left: 30px; }
+
+/* line 609, ../sass/sl-editor.scss */
+.checkbox-label {
+  margin-left: 37px; }
+
+/* line 613, ../sass/sl-editor.scss */
+.custom-checkbox {
+  position: absolute;
+  margin-left: 0px;
+  -webkit-transform-origin: 0% 0%;
+  -moz-transform-origin: 0% 0%;
+  -ms-transform-origin: 0% 0%;
+  -o-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2);
+  opacity: 0;
+  z-index: 4;
+  font-size: 60%; }
+
+/* line 623, ../sass/sl-editor.scss */
+.custom-checkbox + .fake-checkbox {
+  vertical-align: middle;
+  margin-right: 5px;
+  background: url(images/editor/ic-checkbox-white.svg) no-repeat;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  padding: 0 0 0 0px; }
+
+/* line 633, ../sass/sl-editor.scss */
+.custom-checkbox:checked + .fake-checkbox {
+  background: url(images/editor/ic-checkmark.svg) no-repeat;
+  -webkit-animation-name: scale;
+  -moz-animation-name: scale;
+  -ms-animation-name: scale;
+  -o-animation-name: scale;
+  animation-name: scale;
+  -webkit-animation-duration: 0.2s;
+  -moz-animation-duration: 0.2s;
+  -ms-animation-duration: 0.2s;
+  -o-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-iteration-count: once;
+  -moz-animation-iteration-count: once;
+  -ms-animation-iteration-count: once;
+  -o-animation-iteration-count: once;
+  animation-iteration-count: once;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out; }
+
+@-webkit-keyframes scale {
+  /* line 643, ../sass/sl-editor.scss */
+  from {
+    -webkit-transform: scale(0.6); }
+
+  /* line 644, ../sass/sl-editor.scss */
+  90% {
+    -webkit-transform: scale(1.1); }
+
+  /* line 645, ../sass/sl-editor.scss */
+  to {
+    -webkit-transform: scale(1); } }
+
+@-moz-keyframes scale {
+  /* line 649, ../sass/sl-editor.scss */
+  from {
+    -moz-transform: scale(0.6); }
+
+  /* line 650, ../sass/sl-editor.scss */
+  90% {
+    -moz-transform: scale(1.1); }
+
+  /* line 651, ../sass/sl-editor.scss */
+  to {
+    -moz-transform: scale(1); } }
+
+/* line 658, ../sass/sl-editor.scss */
+.load-placeholder {
+  position: absolute;
+  width: 100%;
+  height: 450px;
+  opacity: 0; }
+
+/* line 665, ../sass/sl-editor.scss */
+.load-container {
+  height: 14px;
+  border-radius: 7px;
+  width: 80%;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  border: 1px solid #aaa;
+  background: #ccc; }
+
+/* line 678, ../sass/sl-editor.scss */
+.load-progress {
+  height: 12px;
+  border-radius: 6px;
+  display: block;
+  background: #429FC9;
+  width: 0%;
+  transition: width 0.5s;
+  max-width: 100%; }

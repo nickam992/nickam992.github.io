@@ -1,0 +1,94 @@
+@import url('../../../widget_data/fonts/proxima-nova/proxima-nova-regular.css');
+@import url('../../../widget_data/fonts/proxima-nova/proxima-nova-bold.css');
+@import url('../../../widget_data/fonts/proxima-nova/proxima-nova-regular-it.css');
+@import url('../../../widget_data/fonts/proxima-nova/proxima-nova-bold-it.css');
+
+.mhe-button {
+    background: none;
+    border: none;
+    color: #3c9ecb;
+    font-weight: normal;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.mhe-icon {
+    display: inline-block;
+}
+
+.mhe-button .mhe-icon {
+    vertical-align: middle;
+}
+
+.mhe-icon-add {
+    width: 22px;
+    height: 22px;
+    background: transparent url(../img/add.png) center top no-repeat;
+}
+
+.mhe-button:hover .mhe-icon-add {
+    background-position: center bottom;
+}
+
+.mhe-icon-move {
+    width: 25px;
+    height: 25px;
+    background: transparent url(../img/move.png) center center no-repeat;
+}
+
+.mhe-icon-expand-section {
+    width: 23px;
+    height: 23px;
+    background: transparent url(../img/expand-section.png) center center no-repeat;
+    transition: 0.1s ease-in-out;
+}
+
+.open .mhe-icon-expand-section {
+    transform: rotate(90deg);
+}
+
+.mhe-icon-trash {
+    width: 18px;
+    height: 23px;
+    background: transparent url(../img/trash.png) center center no-repeat;
+}
+
+.mhe-icon-chevron-left {
+    width: 14px;
+    height: 24px;
+    background: transparent url(../img/chevron-left.png) center center no-repeat;
+}
+
+.mhe-icon-chevron-right {
+    width: 14px;
+    height: 24px;
+    background: transparent url(../img/chevron-right.png) center center no-repeat;
+}
+
+.mhe-icon-pin {
+    width: 25px;
+    height: 25px;
+    background: transparent url(../img/pin.png) center bottom no-repeat;
+}
+
+.pinned .mhe-icon-pin {
+    background-position: center top;
+}
+
+.mhe-icon-picture {
+    width: 25px;
+    height: 18px;
+    background: transparent url(../img/picture.png) center center no-repeat;
+}
+
+.mhe-icon-plus {
+    width: 23px;
+    height: 23px;
+    background: transparent url(../img/plus.png) center center no-repeat;
+}
+
+.mhe-icon-minus {
+    width: 23px;
+    height: 23px;
+    background: transparent url(../img/minus.png) center center no-repeat;
+}

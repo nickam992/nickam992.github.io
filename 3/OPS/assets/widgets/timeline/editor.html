@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Timeline Editor</title>
+    <script type="text/javascript" src="widget_template/js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="widget_template/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script type="text/javascript" src="widget_template/js/prism.js"></script>
+    <script src="shared/inklingwidget.js"></script>
+    <link rel="stylesheet" href="stylesheets/editor.css">
+    <link rel="stylesheet" href="../widget_template/css/prism.css">
+</head>
+<body class="editor panel--active">
+    <div class="panel">
+        <ul class="panel-menu">
+            <li><a class="panel-tab" href="#tabs-1">Events</a>
+            </li>
+            <span class="stretch"></span>
+            <li class="menu-underline"></li>
+        </ul>
+        <div class="panel-content">
+            <div id="tabs-1">
+                <div class="group">
+                    <ul class="menu-list" id="panelSlides">
+                        <!--   <li class="btn-select">
+                            <span>Headline</span>
+                            <div class="delete-slide"></div>
+                        </li> -->
+                    </ul>
+                    <div id="addButton">Add Event</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="workspace">
+        <div class="content">
+            <div class="grid">
+                <div class="group one-half" id="startDate">
+                    <h4 class="group-title">Start Date</h4>
+                    <div class="inputGroup">
+                        <input type="text" class="inputDay date" maxlength="2">
+                        <input type="text" class="inputMonth date" maxlength="2">
+                        <input type="text" class="inputYear date" maxlength="4">
+                        <input type="text" class="inputTime date" maxlength="8">
+                    </div>
+                    <span class="day">DD</span>
+                    <span class="month">MM</span>
+                    <span class="year">YYYY</span>
+                    <span class="time">0:00:00</span>
+                </div>
+                <div id="arrow"></div>
+                <div class="group one-half" id="endDate">
+                    <h4 class="group-title">End Date</h4>
+                    <div class="inputGroup">
+                        <input type="text" class="inputDay date" maxlength="2">
+                        <input type="text" class="inputMonth date" maxlength="2">
+                        <input type="text" class="inputYear date" maxlength="4">
+                        <input type="text" class="inputTime date" maxlength="8">
+                    </div>
+                    <span class="day">DD</span>
+                    <span class="month">MM</span>
+                    <span class="year">YYYY</span>
+                    <span class="time">0:00:00</span>
+                </div>
+            </div>
+            <div class="group">
+                <h4 class="group-title">Slide
+                    <label class="checkbox">
+                        <input type="checkbox" id="titleSlide">
+                        <span class="checkbox-label">Title Slide</span>
+                    </label>
+                </h4>
+                <textarea placeholder="Headline" id="headline" rows="1"></textarea>
+                <textarea placeholder="Description" id="description" rows="1"></textarea>
+                <div id="addImage" class="imageEditor">
+                    <span>Add Image</span>
+                    <span class='optional'>(optional)</span>
+                    <input id="imagePicker" type="file">
+                </div>
+                <div class="group" id="imageGroup" style="display: none">
+                    <menu class="button-menu vert-right" id="imageButtons">
+                        <div class="button btn-replace" name="Swap Image">
+                            <input id="swapButton" type="file">
+                        </div>
+                        <div class="button btn-delete" name="Delete Image">
+                        </div>
+                    </menu>
+                    <div class="image">
+                        <img id="imageContainer" style="display:none">
+                    </div>
+                    <textarea class="imageCaption" placeholder="Media Caption (Optional)" rows="1"></textarea>
+                    <textarea class="imageCredit" placeholder="Media Credit (Optional)" rows="1"></textarea>
+                </div>
+            </div>
+            <div class="group" id="categories">
+                <h4 class="group-title">Categories
+                    <span class='optional'>(optional)</span>
+                </h4>
+                <span>Add a category for event. There can be 6 unique categories.</span>
+                <textarea placeholder="Add Category" rows="1"></textarea>
+                <!-- <div class="tag">
+                    <span> Italy</span> <div class="deleteTag"></div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="overlay-mask"></div>
+
+      <div class="dialog-box confirmation">
+            <div class="dialogText">
+                <h4>Are you sure?</h4>
+            </div>
+            <div class="dialogButtons">
+                <div class="button-div confirmDelete clickable"><div class="button-text">Okay</div></div><br>
+                <!-- <span class="cancelDelete clickable">Cancel</span> -->
+            </div>
+           <!--  <div class="show-again">
+                <input type="checkbox" id="showDelConf" class="custom-checkbox">
+                <div class="fake-checkbox"></div>
+                Don't show this message again.
+            </div> -->
+        </div>
+    <script>
+    $(document).ready(function() {
+        if (document.location.hostname == 'localhost') {
+            s9.initialParams = {
+
+                "date": JSON.stringify([{
+                    "startDate": "2011,12,10,12,59,",
+                    "endDate": "2011,12,11,12,59,59",
+                    "headline": "Headline Goes Here1",
+                    "text": "<p>Body text goes here, some HTML is OK</p>",
+                    "tag": "cheeeeeeeese",
+                    "classname": "optionaluniqueclassnamecanbeaddedhere",
+                    "asset": {
+                        "media": "",
+                        "credit": "Credit Name Goes Here",
+                        "caption": "Caption text goes here"
+                    }
+                }, {
+                    "startDate": "2011,12,13",
+                    "endDate": "2011,12,15",
+                    "headline": "Headline Goes Here12",
+                    "text": "<p>Body text goes here, some HTML is OK</p>",
+                    "tag": "candy",
+                    "classname": "optionaluniqueclassnamecanbeaddedhere",
+                    "asset": {
+                        "media": "",
+                        "credit": "Credit Name Goes Here",
+                        "caption": "Caption text goes here"
+                    }
+                }]),
+                'titleSlide': '1'
+            }
+        }
+    })
+    </script>
+    <script type="text/javascript" src="widget_template/js/editor.js"></script>
+    <script type="text/javascript" src="js/editor.js"></script>
+
+</body>
+
+</html>
