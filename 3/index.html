@@ -1,1 +1,27 @@
-stupid
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="algorithm.css">
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body>
+		<p><span>Starting Money:  $<input type="text" id="startingMoney" value="5000"></input></p>
+		<p><span>Multiply wagers by:  <input id="multiplyBy" maxlength="1" value="2"></input></p>
+		<p><span>Number of bets to simulate:  <input id="numBets" value="1000"></input></p>
+		<button id ="bet1000">Simulate bets</button>
+
+		<hr/>
+
+		<p><span>Number of Wagers:  <span id="numWagers">0</span></p>
+		<p><span>Current Money:  $<span id="currentMoney">5000</span></p>
+		<p><span>Current Wager:  $<span id="currentWager">1</span></p>
+		<p><span>Previous Wager:  <span id="previousWager">None</span></p>
+		<button id ="bet">bet once</button>
+
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="algorithm.js"></script>
+	</body>
+</html>
